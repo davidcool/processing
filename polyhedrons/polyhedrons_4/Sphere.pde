@@ -12,11 +12,11 @@ class Sphere {
   };
   
   public void addSphereItem() {
-    Polyhedron si = new RegularHexagonalToroid12faces();
+    Polyhedron si = new SmallHexagrammicHexecontahedron();
     //Set random values for the spherical coordinates
     si.positionSphere(radius, random(PI * 2), random(PI * 2));
     //scale
-    si.scaleFactor(30);
+    si.scaleFactor(5000);
     //fill
     si.fillColor(int(random(255)), int(random(255)), int(random(255)), 30);
     //stroke
@@ -33,49 +33,7 @@ class Sphere {
       //Set random values for the spherical coordinates
       si.positionSphere(radius, random(PI * 2), random(PI * 2));
       //scale
-      si.scaleFactor(300);
-      //fill
-      si.fillColor(int(random(255)), int(random(255)), int(random(255)), 30);
-      //stroke
-      si.noStrokeToggle(true);
-      //si.strokeColor(int(random(255)), int(random(255)), int(random(255)), 255);
-      //Add the new sphere item to the end of our ArrayList
-      items.add(items.size(), si);
-    }
-    if (type.equals("SmallStellatedTruncatedDodecahedron") == true) {
-      Polyhedron si = new SmallStellatedTruncatedDodecahedron();
-      //Set random values for the spherical coordinates
-      si.positionSphere(radius, random(PI * 2), random(PI * 2));
-      //scale
-      si.scaleFactor(100);
-      //fill
-      si.fillColor(int(random(255)), int(random(255)), int(random(255)), 30);
-      //stroke
-      si.noStrokeToggle(true);
-      //si.strokeColor(int(random(255)), int(random(255)), int(random(255)), 255);
-      //Add the new sphere item to the end of our ArrayList
-      items.add(items.size(), si);
-    }
-    if (type.equals("TridyakisIcosahedron") == true) {
-      Polyhedron si = new TridyakisIcosahedron();
-      //Set random values for the spherical coordinates
-      si.positionSphere(radius, random(PI * 2), random(PI * 2));
-      //scale
-      si.scaleFactor(100);
-      //fill
-      si.fillColor(int(random(255)), int(random(255)), int(random(255)), 30);
-      //stroke
-      si.noStrokeToggle(true);
-      //si.strokeColor(int(random(255)), int(random(255)), int(random(255)), 255);
-      //Add the new sphere item to the end of our ArrayList
-      items.add(items.size(), si);
-    }
-    if (type.equals("MedialPentagonalHexecontahedron") == true) {
-      Polyhedron si = new MedialPentagonalHexecontahedron();
-      //Set random values for the spherical coordinates
-      si.positionSphere(radius, random(PI * 2), random(PI * 2));
-      //scale
-      si.scaleFactor(100);
+      si.scaleFactor(5000);
       //fill
       si.fillColor(int(random(255)), int(random(255)), int(random(255)), 30);
       //stroke

@@ -16,16 +16,6 @@ Polyhedron classes for Processing
 - Great Stellated Dodecahedron
 - Great Icosahedron
 
-#### Archimedean Solids
-- Truncated Tetrahedron
-- Cuboctahedron
-- Truncated Octahedron
-- Truncated Cube
-- Rhombicuboctahedron
-- Snub Cube (laevo)
-- Icosidodecahedron
-- Truncated Cuboctahedron
-
 #### Versi-Regular Polyhedra
 - Tetrahemihexahedron
 - Cubohemioctahedron
@@ -36,6 +26,28 @@ Polyhedron classes for Processing
 - Great Dodecahemicosahedron
 - Small Icosihemidodecahedron
 - Great Icosihemidodecahedron
+
+#### Archimedean Solids
+- Truncated Tetrahedron
+- Cuboctahedron
+- Truncated Octahedron
+- Truncated Cube
+- Rhombicuboctahedron
+- Snub Cube (laevo)
+- Icosidodecahedron
+- Truncated Cuboctahedron
+- Truncated Icosahedron
+- Truncated Dodecahedron
+- Rhombicosidodecahedron
+- Snub Dodecahedron (laevo)
+- Truncated Icosidodecahedron
+
+#### Self-Intersecting Quasi-Regular Polyhedra
+- Ditrigonal Dodecadodecahedron
+- Small Ditrigonal Icosidodecahedron
+- Great Ditrigonal Icosidodecahedron
+- Dodecadodecahedron
+- Great Icosidodecahedron
 
 #### Self-Intersecting Quasi-Quasi-Regular Polyhedra
 - Small Cubicuboctahedron

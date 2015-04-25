@@ -38,15 +38,6 @@ public void setup(){
   polyObjects.add(new GreatDodecahedron());
   polyObjects.add(new GreatStellatedDodecahedron());
   polyObjects.add(new GreatIcosahedron());
-  //archimedean solids
-  polyObjects.add(new TruncatedTetrahedron());
-  polyObjects.add(new Cuboctahedron());
-  polyObjects.add(new TruncatedOctahedron());
-  polyObjects.add(new TruncatedCube());
-  polyObjects.add(new Rhombicuboctahedron());
-  polyObjects.add(new SnubCube());
-  polyObjects.add(new Icosidodecahedron());
-  polyObjects.add(new TruncatedCuboctahedron());
   //versi-regular polyhedra
   polyObjects.add(new Tetrahemihexahedron());
   polyObjects.add(new Cubohemioctahedron());
@@ -57,6 +48,39 @@ public void setup(){
   polyObjects.add(new GreatDodecahemicosahedron());
   polyObjects.add(new SmallIcosihemidodecahedron());
   polyObjects.add(new GreatIcosihemidodecahedron());
+  //archimedean solids
+  polyObjects.add(new TruncatedTetrahedron());
+  polyObjects.add(new Cuboctahedron());
+  polyObjects.add(new TruncatedOctahedron());
+  polyObjects.add(new TruncatedCube());
+  polyObjects.add(new Rhombicuboctahedron());
+  polyObjects.add(new SnubCube());
+  polyObjects.add(new Icosidodecahedron());
+  polyObjects.add(new TruncatedCuboctahedron());
+  polyObjects.add(new TruncatedIcosahedron());
+  polyObjects.add(new TruncatedDodecahedron());
+  polyObjects.add(new Rhombicosidodecahedron());
+  polyObjects.add(new SnubDodecahedron());
+  polyObjects.add(new TruncatedIcosidodecahedron());
+  //self-intersecting quasi-regular polyhedra
+  polyObjects.add(new DitrigonalDodecadodecahedron());
+  polyObjects.add(new SmallDitrigonalIcosidodecahedron());
+  polyObjects.add(new GreatDitrigonalIcosidodecahedron());
+  polyObjects.add(new Dodecadodecahedron());
+  polyObjects.add(new GreatIcosidodecahedron());
+  //self-intersecting quasi-quasi-regular polyhedra
+  polyObjects.add(new SmallCubicuboctahedron());
+  polyObjects.add(new GreatCubicuboctahedron());
+  polyObjects.add(new UniformGreatRhombicuboctahedron());
+  polyObjects.add(new SmallDodecicosidodecahedron());
+  polyObjects.add(new GreatDodecicosidodecahedron());
+  polyObjects.add(new SmallDitrigonalDodecicosidodecahedron());
+  polyObjects.add(new GreatDitrigonalDodecicosidodecahedron());
+  polyObjects.add(new Icosidodecadodecahedron());
+  polyObjects.add(new SmallIcosicosidodecahedron());
+  polyObjects.add(new GreatIcosicosidodecahedron());
+  polyObjects.add(new Rhombidodecadodecahedron());
+  polyObjects.add(new UniformGreatRhombicosidodecahedron());
   //self-intersecting truncated regular polyhedra
   polyObjects.add(new StellatedTruncatedHexahedron());
   polyObjects.add(new TruncatedGreatDodecahedron());

@@ -2003,6 +2003,168 @@ public class GreatDodecahemidodecahedron extends Polyhedron {
    
 } //end class GreatDodecahemidodecahedron
 /*
+GreatDodecicosahedron class
+
+david cool
+http://davidcool.com
+http://generactive.net
+http://mystic.codes
+*/
+
+public class GreatDodecicosahedron extends Polyhedron {
+  
+  // polyhedron
+  final int FACES = 32;     // number of faces 
+  final int VERTICES = 10;   // VERTICES per face
+  final float C0 = 0.190983005625052575897706582817f;  //(3 - sqrt(5)) / 4
+  final float C1 = 0.618033988749894848204586834366f;  //(sqrt(5) - 1) / 2
+  final float C2 = 0.809016994374947424102293417183f;  //(1 + sqrt(5)) / 4
+  final float C3 = 1.11803398874989484820458683437f;   //sqrt(5) / 2
+  private PVector[] vert = new PVector[60]; // list of ve//rtices
+  private int[][] faces =  new int[FACES][VERTICES];  // list of faces (joining vertices)
+  
+  private GreatDodecicosahedron() {   
+    // set vertices
+    vert[  0] = new PVector(  -C2,  0.5f,  -C1 );
+    vert[  1] = new PVector(  -C2,  0.5f,   C1 );
+    vert[  2] = new PVector(   C2,  0.5f,  -C1 );
+    vert[  3] = new PVector(   C2,  0.5f,   C1 );
+    vert[  4] = new PVector(  -C2, -0.5f,  -C1 );
+    vert[  5] = new PVector(  -C2, -0.5f,   C1 );
+    vert[  6] = new PVector(   C2, -0.5f,  -C1 );
+    vert[  7] = new PVector(   C2, -0.5f,   C1 );
+    vert[  8] = new PVector(  0.5f,  -C1,  -C2 );
+    vert[  9] = new PVector(  0.5f,  -C1,   C2 );
+    vert[ 10] = new PVector( -0.5f,  -C1,  -C2 );
+    vert[ 11] = new PVector( -0.5f,  -C1,   C2 );
+    vert[ 12] = new PVector(  0.5f,   C1,  -C2 );
+    vert[ 13] = new PVector(  0.5f,   C1,   C2 );
+    vert[ 14] = new PVector( -0.5f,   C1,  -C2 );
+    vert[ 15] = new PVector( -0.5f,   C1,   C2 );
+    vert[ 16] = new PVector(  -C1,  -C2,  0.5f );
+    vert[ 17] = new PVector(  -C1,  -C2, -0.5f );
+    vert[ 18] = new PVector(   C1,  -C2,  0.5f );
+    vert[ 19] = new PVector(   C1,  -C2, -0.5f );
+    vert[ 20] = new PVector(  -C1,   C2,  0.5f );
+    vert[ 21] = new PVector(  -C1,   C2, -0.5f );
+    vert[ 22] = new PVector(   C1,   C2,  0.5f );
+    vert[ 23] = new PVector(   C1,   C2, -0.5f );
+    vert[ 24] = new PVector(  -C3,  0.0f,   C0 );
+    vert[ 25] = new PVector(  -C3,  0.0f,  -C0 );
+    vert[ 26] = new PVector(   C3,  0.0f,   C0 );
+    vert[ 27] = new PVector(   C3,  0.0f,  -C0 );
+    vert[ 28] = new PVector(  0.0f,   C0,  -C3 );
+    vert[ 29] = new PVector(  0.0f,   C0,   C3 );
+    vert[ 30] = new PVector(  0.0f,  -C0,  -C3 );
+    vert[ 31] = new PVector(  0.0f,  -C0,   C3 );
+    vert[ 32] = new PVector(   C0,  -C3,  0.0f );
+    vert[ 33] = new PVector(  -C0,  -C3,  0.0f );
+    vert[ 34] = new PVector(   C0,   C3,  0.0f );
+    vert[ 35] = new PVector(  -C0,   C3,  0.0f );
+    vert[ 36] = new PVector(  0.5f,  1.0f,   C0 );
+    vert[ 37] = new PVector(  0.5f,  1.0f,  -C0 );
+    vert[ 38] = new PVector( -0.5f,  1.0f,   C0 );
+    vert[ 39] = new PVector( -0.5f,  1.0f,  -C0 );
+    vert[ 40] = new PVector(  0.5f, -1.0f,   C0 );
+    vert[ 41] = new PVector(  0.5f, -1.0f,  -C0 );
+    vert[ 42] = new PVector( -0.5f, -1.0f,   C0 );
+    vert[ 43] = new PVector( -0.5f, -1.0f,  -C0 );
+    vert[ 44] = new PVector(  1.0f,   C0,  0.5f );
+    vert[ 45] = new PVector(  1.0f,   C0, -0.5f );
+    vert[ 46] = new PVector( -1.0f,   C0,  0.5f );
+    vert[ 47] = new PVector( -1.0f,   C0, -0.5f );
+    vert[ 48] = new PVector(  1.0f,  -C0,  0.5f );
+    vert[ 49] = new PVector(  1.0f,  -C0, -0.5f );
+    vert[ 50] = new PVector( -1.0f,  -C0,  0.5f );
+    vert[ 51] = new PVector( -1.0f,  -C0, -0.5f );
+    vert[ 52] = new PVector(   C0,  0.5f,  1.0f );
+    vert[ 53] = new PVector(   C0,  0.5f, -1.0f );
+    vert[ 54] = new PVector(  -C0,  0.5f,  1.0f );
+    vert[ 55] = new PVector(  -C0,  0.5f, -1.0f );
+    vert[ 56] = new PVector(   C0, -0.5f,  1.0f );
+    vert[ 57] = new PVector(   C0, -0.5f, -1.0f );
+    vert[ 58] = new PVector(  -C0, -0.5f,  1.0f );
+    vert[ 59] = new PVector(  -C0, -0.5f, -1.0f );
+    // set faces
+    faces[ 0] = new int[] {  0,  4, 30, 14, 51, 59, 55, 47, 10, 28 };
+    faces[ 1] = new int[] {  0, 38, 46, 47, 39,  1, 25, 21, 20, 24 };
+    faces[ 2] = new int[] {  2, 26, 22, 23, 27,  3, 37, 45, 44, 36 };
+    faces[ 3] = new int[] {  2, 28,  8, 45, 53, 57, 49, 12, 30,  6 };
+    faces[ 4] = new int[] {  5,  1, 29, 11, 46, 54, 58, 50, 15, 31 };
+    faces[ 5] = new int[] {  5, 43, 51, 50, 42,  4, 24, 16, 17, 25 };
+    faces[ 6] = new int[] {  7, 27, 19, 18, 26,  6, 40, 48, 49, 41 };
+    faces[ 7] = new int[] {  7, 31, 13, 48, 56, 52, 44,  9, 29,  3 };
+    faces[ 8] = new int[] { 33, 11,  9, 32, 16, 56, 40, 42, 58, 18 };
+    faces[ 9] = new int[] { 33, 19, 59, 43, 41, 57, 17, 32,  8, 10 };
+    faces[10] = new int[] { 34, 13, 15, 35, 22, 54, 38, 36, 52, 20 };
+    faces[11] = new int[] { 34, 21, 53, 37, 39, 55, 23, 35, 14, 12 };
+    faces[12] = new int[] {  0,  4, 42, 58, 54, 38, 38, 38, 38, 38 }; //added 4x 6th number to fill gap
+    faces[13] = new int[] {  0, 28,  8, 32, 16, 24, 24, 24, 24, 24 }; //added 4x 6th number to fill gap
+    faces[14] = new int[] {  3,  7, 41, 57, 53, 37, 37, 37, 37, 37 }; //added 4x 6th number to fill gap
+    faces[15] = new int[] {  3, 29, 11, 33, 19, 27, 27, 27, 27, 27 }; //added 4x 6th number to fill gap
+    faces[16] = new int[] { 17, 32,  9, 29,  1, 25, 25, 25, 25, 25 }; //added 4x 6th number to fill gap
+    faces[17] = new int[] { 17, 57, 49, 48, 56, 16, 16, 16, 16, 16 }; //added 4x 6th number to fill gap
+    faces[18] = new int[] { 18, 33, 10, 28,  2, 26, 26, 26, 26, 26 }; //added 4x 6th number to fill gap
+    faces[19] = new int[] { 18, 58, 50, 51, 59, 19, 19, 19, 19, 19 }; //added 4x 6th number to fill gap
+    faces[20] = new int[] { 34, 12, 30,  4, 24, 20, 20, 20, 20, 20 }; //added 4x 6th number to fill gap
+    faces[21] = new int[] { 34, 21, 25,  5, 31, 13, 13, 13, 13, 13 }; //added 4x 6th number to fill gap
+    faces[22] = new int[] { 35, 15, 31,  7, 27, 23, 23, 23, 23, 23 }; //added 4x 6th number to fill gap
+    faces[23] = new int[] { 35, 22, 26,  6, 30, 14, 14, 14, 14, 14 }; //added 4x 6th number to fill gap
+    faces[24] = new int[] { 40,  6,  2, 36, 52, 56, 56, 56, 56, 56 }; //added 4x 6th number to fill gap
+    faces[25] = new int[] { 40, 48, 13, 15, 50, 42, 42, 42, 42, 42 }; //added 4x 6th number to fill gap
+    faces[26] = new int[] { 43,  5,  1, 39, 55, 59, 59, 59, 59, 59 }; //added 4x 6th number to fill gap
+    faces[27] = new int[] { 43, 51, 14, 12, 49, 41, 41, 41, 41, 41 }; //added 4x 6th number to fill gap
+    faces[28] = new int[] { 44, 36, 38, 46, 11,  9,  9,  9,  9,  9 }; //added 4x 6th number to fill gap
+    faces[29] = new int[] { 44, 45, 53, 21, 20, 52, 52, 52, 52, 52 }; //added 4x 6th number to fill gap
+    faces[30] = new int[] { 47, 39, 37, 45,  8, 10, 10, 10, 10, 10 }; //added 4x 6th number to fill gap
+    faces[31] = new int[] { 47, 46, 54, 22, 23, 55, 55, 55, 55, 55 }; //added 4x 6th number to fill gap
+  } //end GreatDodecicosahedron()
+
+  public String name() {
+    return "Great Dodecicosahedron";
+  }
+
+  public void render() {  
+    if (nofill) {
+      noFill();
+    } else {
+      fill(fc0, fc1, fc2, fc3);
+    }
+        
+    if (nostroke) {
+      noStroke();
+    } else {
+      stroke(sc0, sc1, sc2, sc3);
+    }
+    
+    if (parentSphere) {
+      //Get parent sphere radius
+      r = radius + stray;
+      //Convert spherical coordinates into Cartesian coordinates
+      x = cos(theta) * sin(phi) * r;
+      y = sin(theta) * sin(phi) * r;
+      z = cos(phi) * r;
+    }
+    
+    pushMatrix();
+    translate(x, y, z);
+    scale(scaleSize * zoom); 
+    strokeWeight(sw);
+    rotateX(rx);
+    rotateY(ry);
+    rotateZ(rz);
+    for (int i = 0; i < FACES; i = i+1) {
+      beginShape();
+      for (int i2 = 0; i2 < VERTICES; i2 = i2+1) {
+        vertex(vert[faces[i][i2]].x,vert[faces[i][i2]].y,vert[faces[i][i2]].z);
+      } // end for
+      endShape(CLOSE);
+    } // end for 
+    popMatrix();
+  } //end render()
+   
+} //end class GreatDodecicosahedron
+/*
 GreatDodecicosidodecahedron class
 
 david cool
@@ -4142,6 +4304,288 @@ public class GreatRetrosnubIcosidodecahedron extends Polyhedron {
   } //end render()
    
 } //end class GreatRetrosnubIcosidodecahedron
+/*
+GreatRhombidodecahedron class
+
+david cool
+http://davidcool.com
+http://generactive.net
+http://mystic.codes
+*/
+
+public class GreatRhombidodecahedron extends Polyhedron {
+  
+  // polyhedron
+  final int FACES = 42;     // number of faces 
+  final int VERTICES = 10;   // VERTICES per face
+  final float C0 = 0.118033988749894848204586834366f;  //(sqrt(5) - 2) / 2
+  final float C1 = 0.190983005625052575897706582817f;  //(3 - sqrt(5)) / 4
+  final float C2 = 0.309016994374947424102293417183f;  //(sqrt(5) - 1) / 4
+  final float C3 = 0.618033988749894848204586834366f;  //(sqrt(5) - 1) / 2
+  final float C4 = 0.690983005625052575897706582817f;  //(5 - sqrt(5)) / 4
+  private PVector[] vert = new PVector[60]; // list of ve//rtices
+  private int[][] faces =  new int[FACES][VERTICES];  // list of faces (joining vertices)
+  
+  private GreatRhombidodecahedron() {   
+    // set vertices
+    vert[  0] = new PVector( -0.5f, -0.5f,   C0 );
+    vert[  1] = new PVector( -0.5f, -0.5f,  -C0 );
+    vert[  2] = new PVector(  0.5f, -0.5f,   C0 );
+    vert[  3] = new PVector(  0.5f, -0.5f,  -C0 );
+    vert[  4] = new PVector( -0.5f,  0.5f,   C0 );
+    vert[  5] = new PVector( -0.5f,  0.5f,  -C0 );
+    vert[  6] = new PVector(  0.5f,  0.5f,   C0 );
+    vert[  7] = new PVector(  0.5f,  0.5f,  -C0 );
+    vert[  8] = new PVector( -0.5f,   C0, -0.5f );
+    vert[  9] = new PVector( -0.5f,   C0,  0.5f );
+    vert[ 10] = new PVector(  0.5f,   C0, -0.5f );
+    vert[ 11] = new PVector(  0.5f,   C0,  0.5f );
+    vert[ 12] = new PVector( -0.5f,  -C0, -0.5f );
+    vert[ 13] = new PVector( -0.5f,  -C0,  0.5f );
+    vert[ 14] = new PVector(  0.5f,  -C0, -0.5f );
+    vert[ 15] = new PVector(  0.5f,  -C0,  0.5f );
+    vert[ 16] = new PVector(   C0, -0.5f, -0.5f );
+    vert[ 17] = new PVector(   C0, -0.5f,  0.5f );
+    vert[ 18] = new PVector(  -C0, -0.5f, -0.5f );
+    vert[ 19] = new PVector(  -C0, -0.5f,  0.5f );
+    vert[ 20] = new PVector(   C0,  0.5f, -0.5f );
+    vert[ 21] = new PVector(   C0,  0.5f,  0.5f );
+    vert[ 22] = new PVector(  -C0,  0.5f, -0.5f );
+    vert[ 23] = new PVector(  -C0,  0.5f,  0.5f );
+    vert[ 24] = new PVector(  -C1,  0.0f,  -C4 );
+    vert[ 25] = new PVector(  -C1,  0.0f,   C4 );
+    vert[ 26] = new PVector(   C1,  0.0f,  -C4 );
+    vert[ 27] = new PVector(   C1,  0.0f,   C4 );
+    vert[ 28] = new PVector(  0.0f,  -C4,  -C1 );
+    vert[ 29] = new PVector(  0.0f,  -C4,   C1 );
+    vert[ 30] = new PVector(  0.0f,   C4,  -C1 );
+    vert[ 31] = new PVector(  0.0f,   C4,   C1 );
+    vert[ 32] = new PVector(  -C4,  -C1,  0.0f );
+    vert[ 33] = new PVector(   C4,  -C1,  0.0f );
+    vert[ 34] = new PVector(  -C4,   C1,  0.0f );
+    vert[ 35] = new PVector(   C4,   C1,  0.0f );
+    vert[ 36] = new PVector(   C2,  -C1,   C3 );
+    vert[ 37] = new PVector(   C2,  -C1,  -C3 );
+    vert[ 38] = new PVector(  -C2,  -C1,   C3 );
+    vert[ 39] = new PVector(  -C2,  -C1,  -C3 );
+    vert[ 40] = new PVector(   C2,   C1,   C3 );
+    vert[ 41] = new PVector(   C2,   C1,  -C3 );
+    vert[ 42] = new PVector(  -C2,   C1,   C3 );
+    vert[ 43] = new PVector(  -C2,   C1,  -C3 );
+    vert[ 44] = new PVector(  -C1,   C3,   C2 );
+    vert[ 45] = new PVector(  -C1,   C3,  -C2 );
+    vert[ 46] = new PVector(   C1,   C3,   C2 );
+    vert[ 47] = new PVector(   C1,   C3,  -C2 );
+    vert[ 48] = new PVector(  -C1,  -C3,   C2 );
+    vert[ 49] = new PVector(  -C1,  -C3,  -C2 );
+    vert[ 50] = new PVector(   C1,  -C3,   C2 );
+    vert[ 51] = new PVector(   C1,  -C3,  -C2 );
+    vert[ 52] = new PVector(   C3,   C2,  -C1 );
+    vert[ 53] = new PVector(   C3,   C2,   C1 );
+    vert[ 54] = new PVector(  -C3,   C2,  -C1 );
+    vert[ 55] = new PVector(  -C3,   C2,   C1 );
+    vert[ 56] = new PVector(   C3,  -C2,  -C1 );
+    vert[ 57] = new PVector(   C3,  -C2,   C1 );
+    vert[ 58] = new PVector(  -C3,  -C2,  -C1 );
+    vert[ 59] = new PVector(  -C3,  -C2,   C1 );
+    // set faces
+    faces[ 0] = new int[] {  0, 24, 56, 48, 12, 14, 50, 58, 26,  2 };
+    faces[ 1] = new int[] {  0, 36, 44, 32, 17, 21, 34, 48, 40,  4 };
+    faces[ 2] = new int[] {  7,  3, 39, 47, 33, 18, 22, 35, 51, 43 };
+    faces[ 3] = new int[] {  7,  5, 25, 53, 45,  9, 11, 47, 55, 27 };
+    faces[ 4] = new int[] { 10,  8, 44, 52, 24,  4,  6, 26, 54, 46 };
+    faces[ 5] = new int[] { 10, 11, 29, 37, 53, 17, 16, 52, 36, 28 };
+    faces[ 6] = new int[] { 13, 31, 43, 59, 23, 22, 58, 42, 30, 12 };
+    faces[ 7] = new int[] { 13, 49, 57, 25,  1,  3, 27, 59, 51, 15 };
+    faces[ 8] = new int[] { 19, 33, 46, 38,  2,  6, 42, 50, 35, 23 };
+    faces[ 9] = new int[] { 19, 55, 39, 29,  9,  8, 28, 38, 54, 18 };
+    faces[10] = new int[] { 20, 16, 32, 45, 37,  1,  5, 41, 49, 34 };
+    faces[11] = new int[] { 20, 21, 57, 41, 31, 15, 14, 30, 40, 56 };
+    faces[12] = new int[] { 24,  0, 36, 52, 52, 52, 52, 52, 52, 52 }; //added 6x 4th number to fill gap
+    faces[13] = new int[] { 24, 56, 40,  4,  4,  4,  4,  4,  4,  4 }; //added 6x 4th number to fill gap
+    faces[14] = new int[] { 25,  5, 41, 57, 57, 57, 57, 57, 57, 57 }; //added 6x 4th number to fill gap
+    faces[15] = new int[] { 25, 53, 37,  1,  1,  1,  1,  1,  1,  1 }; //added 6x 4th number to fill gap
+    faces[16] = new int[] { 26,  6, 42, 58, 58, 58, 58, 58, 58, 58 }; //added 6x 4th number to fill gap
+    faces[17] = new int[] { 26, 54, 38,  2,  2,  2,  2,  2,  2,  2 }; //added 6x 4th number to fill gap
+    faces[18] = new int[] { 27,  3, 39, 55, 55, 55, 55, 55, 55, 55 }; //added 6x 4th number to fill gap
+    faces[19] = new int[] { 27, 59, 43,  7,  7,  7,  7,  7,  7,  7 }; //added 6x 4th number to fill gap
+    faces[20] = new int[] { 28,  8, 44, 36, 36, 36, 36, 36, 36, 36 }; //added 6x 4th number to fill gap
+    faces[21] = new int[] { 28, 38, 46, 10, 10, 10, 10, 10, 10, 10 }; //added 6x 4th number to fill gap
+    faces[22] = new int[] { 29, 11, 47, 39, 39, 39, 39, 39, 39, 39 }; //added 6x 4th number to fill gap
+    faces[23] = new int[] { 29, 37, 45,  9,  9,  9,  9,  9,  9,  9 }; //added 6x 4th number to fill gap
+    faces[24] = new int[] { 30, 14, 50, 42, 42, 42, 42, 42, 42, 42 }; //added 6x 4th number to fill gap
+    faces[25] = new int[] { 30, 40, 48, 12, 12, 12, 12, 12, 12, 12 }; //added 6x 4th number to fill gap
+    faces[26] = new int[] { 31, 13, 49, 41, 41, 41, 41, 41, 41, 41 }; //added 6x 4th number to fill gap
+    faces[27] = new int[] { 31, 43, 51, 15, 15, 15, 15, 15, 15, 15 }; //added 6x 4th number to fill gap
+    faces[28] = new int[] { 32, 16, 52, 44, 44, 44, 44, 44, 44, 44 }; //added 6x 4th number to fill gap
+    faces[29] = new int[] { 32, 45, 53, 17, 17, 17, 17, 17, 17, 17 }; //added 6x 4th number to fill gap
+    faces[30] = new int[] { 33, 19, 55, 47, 47, 47, 47, 47, 47, 47 }; //added 6x 4th number to fill gap
+    faces[31] = new int[] { 33, 46, 54, 18, 18, 18, 18, 18, 18, 18 }; //added 6x 4th number to fill gap
+    faces[32] = new int[] { 34, 21, 57, 49, 49, 49, 49, 49, 49, 49 }; //added 6x 4th number to fill gap
+    faces[33] = new int[] { 34, 48, 56, 20, 20, 20, 20, 20, 20, 20 }; //added 6x 4th number to fill gap
+    faces[34] = new int[] { 35, 22, 58, 50, 50, 50, 50, 50, 50, 50 }; //added 6x 4th number to fill gap
+    faces[35] = new int[] { 35, 51, 59, 23, 23, 23, 23, 23, 23, 23 }; //added 6x 4th number to fill gap
+    faces[36] = new int[] {  0,  4,  6,  2,  2,  2,  2,  2,  2,  2 }; //added 6x 4th number to fill gap
+    faces[37] = new int[] {  1,  3,  7,  5,  5,  5,  5,  5,  5,  5 }; //added 6x 4th number to fill gap
+    faces[38] = new int[] {  8, 10, 11,  9,  9,  9,  9,  9,  9,  9 }; //added 6x 4th number to fill gap
+    faces[39] = new int[] { 12, 13, 15, 14, 14, 14, 14, 14, 14, 14 }; //added 6x 4th number to fill gap
+    faces[40] = new int[] { 16, 17, 21, 20, 20, 20, 20, 20, 20, 20 }; //added 6x 4th number to fill gap
+    faces[41] = new int[] { 18, 22, 23, 19, 19, 19, 19, 19, 19, 19 }; //added 6x 4th number to fill gap
+  } //end GreatRhombidodecahedron()
+
+  public String name() {
+    return "Great Rhombidodecahedron";
+  }
+
+  public void render() {  
+    if (nofill) {
+      noFill();
+    } else {
+      fill(fc0, fc1, fc2, fc3);
+    }
+        
+    if (nostroke) {
+      noStroke();
+    } else {
+      stroke(sc0, sc1, sc2, sc3);
+    }
+    
+    if (parentSphere) {
+      //Get parent sphere radius
+      r = radius + stray;
+      //Convert spherical coordinates into Cartesian coordinates
+      x = cos(theta) * sin(phi) * r;
+      y = sin(theta) * sin(phi) * r;
+      z = cos(phi) * r;
+    }
+    
+    pushMatrix();
+    translate(x, y, z);
+    scale(scaleSize * zoom); 
+    strokeWeight(sw);
+    rotateX(rx);
+    rotateY(ry);
+    rotateZ(rz);
+    for (int i = 0; i < FACES; i = i+1) {
+      beginShape();
+      for (int i2 = 0; i2 < VERTICES; i2 = i2+1) {
+        vertex(vert[faces[i][i2]].x,vert[faces[i][i2]].y,vert[faces[i][i2]].z);
+      } // end for
+      endShape(CLOSE);
+    } // end for 
+    popMatrix();
+  } //end render()
+   
+} //end class GreatRhombidodecahedron
+/*
+GreatRhombihexahedron class
+
+david cool
+http://davidcool.com
+http://generactive.net
+http://mystic.codes
+*/
+
+public class GreatRhombihexahedron extends Polyhedron {
+  
+  // polyhedron
+  final int FACES = 18;     // number of faces 
+  final int VERTICES = 8;   // VERTICES per face
+  final float C0 = 0.2071067811865475244008443621048f;  //(sqrt(2) - 1) / 2
+  private PVector[] vert = new PVector[24]; // list of ve//rtices
+  private int[][] faces =  new int[FACES][VERTICES];  // list of faces (joining vertices)
+  
+  private GreatRhombihexahedron() {   
+    // set vertices
+    vert[  0] = new PVector( -0.5f, -0.5f,   C0 );
+    vert[  1] = new PVector( -0.5f, -0.5f,  -C0 );
+    vert[  2] = new PVector( -0.5f,  0.5f,   C0 );
+    vert[  3] = new PVector( -0.5f,  0.5f,  -C0 );
+    vert[  4] = new PVector(  0.5f, -0.5f,   C0 );
+    vert[  5] = new PVector(  0.5f, -0.5f,  -C0 );
+    vert[  6] = new PVector(  0.5f,  0.5f,   C0 );
+    vert[  7] = new PVector(  0.5f,  0.5f,  -C0 );
+    vert[  8] = new PVector(   C0, -0.5f, -0.5f );
+    vert[  9] = new PVector(   C0, -0.5f,  0.5f );
+    vert[ 10] = new PVector(   C0,  0.5f, -0.5f );
+    vert[ 11] = new PVector(   C0,  0.5f,  0.5f );
+    vert[ 12] = new PVector(  -C0, -0.5f, -0.5f );
+    vert[ 13] = new PVector(  -C0, -0.5f,  0.5f );
+    vert[ 14] = new PVector(  -C0,  0.5f, -0.5f );
+    vert[ 15] = new PVector(  -C0,  0.5f,  0.5f );
+    vert[ 16] = new PVector( -0.5f,   C0, -0.5f );
+    vert[ 17] = new PVector( -0.5f,   C0,  0.5f );
+    vert[ 18] = new PVector( -0.5f,  -C0, -0.5f );
+    vert[ 19] = new PVector( -0.5f,  -C0,  0.5f );
+    vert[ 20] = new PVector(  0.5f,   C0, -0.5f );
+    vert[ 21] = new PVector(  0.5f,   C0,  0.5f );
+    vert[ 22] = new PVector(  0.5f,  -C0, -0.5f );
+    vert[ 23] = new PVector(  0.5f,  -C0,  0.5f );
+    // set faces
+    faces[ 0] = new int[] {  0,  2, 18, 19,  3,  1, 17, 16 };
+    faces[ 1] = new int[] {  0,  8,  9,  1,  5, 13, 12,  4 };
+    faces[ 2] = new int[] { 14, 15,  7,  3, 11, 10,  2,  6 };
+    faces[ 3] = new int[] { 14, 22, 18, 10,  8, 16, 20, 12 };
+    faces[ 4] = new int[] { 21,  5,  7, 23, 22,  6,  4, 20 };
+    faces[ 5] = new int[] { 21, 17,  9, 11, 19, 23, 15, 13 };
+    faces[ 6] = new int[] {  0,  2, 10,  8,  8,  8,  8,  8 }; //added 4x 4th number to fill gap
+    faces[ 7] = new int[] {  0, 16, 20,  4,  4,  4,  4,  4 }; //added 4x 4th number to fill gap
+    faces[ 8] = new int[] {  7,  3, 19, 23, 23, 23, 23, 23 }; //added 4x 4th number to fill gap
+    faces[ 9] = new int[] {  7, 15, 13,  5,  5,  5,  5,  5 }; //added 4x 4th number to fill gap
+    faces[10] = new int[] { 11,  3,  1,  9,  9,  9,  9,  9 }; //added 4x 4th number to fill gap
+    faces[11] = new int[] { 11, 10, 18, 19, 19, 19, 19, 19 }; //added 4x 4th number to fill gap
+    faces[12] = new int[] { 12, 14,  6,  4,  4,  4,  4,  4 }; //added 4x 4th number to fill gap
+    faces[13] = new int[] { 12, 20, 21, 13, 13, 13, 13, 13 }; //added 4x 4th number to fill gap
+    faces[14] = new int[] { 17,  1,  5, 21, 21, 21, 21, 21 }; //added 4x 4th number to fill gap
+    faces[15] = new int[] { 17, 16,  8,  9,  9,  9,  9,  9 }; //added 4x 4th number to fill gap
+    faces[16] = new int[] { 22, 14, 15, 23, 23, 23, 23, 23 }; //added 4x 4th number to fill gap
+    faces[17] = new int[] { 22, 18,  2,  6,  6,  6,  6,  6 }; //added 4x 4th number to fill gap
+  } //end GreatRhombihexahedron()
+
+  public String name() {
+    return "Great Rhombihexahedron";
+  }
+
+  public void render() {  
+    if (nofill) {
+      noFill();
+    } else {
+      fill(fc0, fc1, fc2, fc3);
+    }
+        
+    if (nostroke) {
+      noStroke();
+    } else {
+      stroke(sc0, sc1, sc2, sc3);
+    }
+    
+    if (parentSphere) {
+      //Get parent sphere radius
+      r = radius + stray;
+      //Convert spherical coordinates into Cartesian coordinates
+      x = cos(theta) * sin(phi) * r;
+      y = sin(theta) * sin(phi) * r;
+      z = cos(phi) * r;
+    }
+    
+    pushMatrix();
+    translate(x, y, z);
+    scale(scaleSize * zoom); 
+    strokeWeight(sw);
+    rotateX(rx);
+    rotateY(ry);
+    rotateZ(rz);
+    for (int i = 0; i < FACES; i = i+1) {
+      beginShape();
+      for (int i2 = 0; i2 < VERTICES; i2 = i2+1) {
+        vertex(vert[faces[i][i2]].x,vert[faces[i][i2]].y,vert[faces[i][i2]].z);
+      } // end for
+      endShape(CLOSE);
+    } // end for 
+    popMatrix();
+  } //end render()
+   
+} //end class GreatRhombihexahedron
 /*
 GreatSnubDodecicosidodecahedron class
 
@@ -6943,6 +7387,14 @@ public void setup(){
   polyObjects.add(new GreatIcosicosidodecahedron());
   polyObjects.add(new Rhombidodecadodecahedron());
   polyObjects.add(new UniformGreatRhombicosidodecahedron());
+  //versi-quasi-regular polyhedra
+  polyObjects.add(new SmallRhombihexahedron());
+  polyObjects.add(new GreatRhombihexahedron());
+  polyObjects.add(new SmallDodecicosahedron());
+  polyObjects.add(new GreatDodecicosahedron());
+  polyObjects.add(new SmallRhombidodecahedron());
+  polyObjects.add(new GreatRhombidodecahedron());
+  polyObjects.add(new Rhombicosahedron());
   //self-intersecting truncated regular polyhedra
   polyObjects.add(new StellatedTruncatedHexahedron());
   polyObjects.add(new TruncatedGreatDodecahedron());
@@ -7284,6 +7736,187 @@ public class RegularHexagonalToroid24Faces extends Polyhedron {
   } //end render()
    
 } //end class RegularHexagonalToroid24Faces
+/*
+Rhombicosahedron class
+
+david cool
+http://davidcool.com
+http://generactive.net
+http://mystic.codes
+*/
+
+public class Rhombicosahedron extends Polyhedron {
+  
+  // polyhedron
+  final int FACES = 50;     // number of faces 
+  final int VERTICES = 6;   // VERTICES per face
+  final float C0 = 0.190983005625052575897706582817f;  //(3 - sqrt(5)) / 4
+  final float C1 = 0.309016994374947424102293417183f;  //(sqrt(5) - 1) / 4
+  final float C2 = 0.809016994374947424102293417183f;  //(1 + sqrt(5)) / 4
+  final float C3 = 1.11803398874989484820458683437f;   //sqrt(5) / 2
+  final float C4 = 1.30901699437494742410229341718f;   //(3 + sqrt(5)) / 4
+  private PVector[] vert = new PVector[60]; // list of ve//rtices
+  private int[][] faces =  new int[FACES][VERTICES];  // list of faces (joining vertices)
+  
+  private Rhombicosahedron() {   
+    // set vertices
+    vert[  0] = new PVector(   C0,  0.0f,   C4 );
+    vert[  1] = new PVector(   C0,  0.0f,  -C4 );
+    vert[  2] = new PVector(  -C0,  0.0f,   C4 );
+    vert[  3] = new PVector(  -C0,  0.0f,  -C4 );
+    vert[  4] = new PVector(   C4,   C0,  0.0f );
+    vert[  5] = new PVector(   C4,  -C0,  0.0f );
+    vert[  6] = new PVector(  -C4,   C0,  0.0f );
+    vert[  7] = new PVector(  -C4,  -C0,  0.0f );
+    vert[  8] = new PVector(  0.0f,   C4,   C0 );
+    vert[  9] = new PVector(  0.0f,   C4,  -C0 );
+    vert[ 10] = new PVector(  0.0f,  -C4,   C0 );
+    vert[ 11] = new PVector(  0.0f,  -C4,  -C0 );
+    vert[ 12] = new PVector(  0.5f,  0.5f,   C3 );
+    vert[ 13] = new PVector(  0.5f,  0.5f,  -C3 );
+    vert[ 14] = new PVector(  0.5f, -0.5f,   C3 );
+    vert[ 15] = new PVector(  0.5f, -0.5f,  -C3 );
+    vert[ 16] = new PVector( -0.5f,  0.5f,   C3 );
+    vert[ 17] = new PVector( -0.5f,  0.5f,  -C3 );
+    vert[ 18] = new PVector( -0.5f, -0.5f,   C3 );
+    vert[ 19] = new PVector( -0.5f, -0.5f,  -C3 );
+    vert[ 20] = new PVector(   C3,  0.5f,  0.5f );
+    vert[ 21] = new PVector(   C3,  0.5f, -0.5f );
+    vert[ 22] = new PVector(   C3, -0.5f,  0.5f );
+    vert[ 23] = new PVector(   C3, -0.5f, -0.5f );
+    vert[ 24] = new PVector(  -C3,  0.5f,  0.5f );
+    vert[ 25] = new PVector(  -C3,  0.5f, -0.5f );
+    vert[ 26] = new PVector(  -C3, -0.5f,  0.5f );
+    vert[ 27] = new PVector(  -C3, -0.5f, -0.5f );
+    vert[ 28] = new PVector(  0.5f,   C3,  0.5f );
+    vert[ 29] = new PVector(  0.5f,   C3, -0.5f );
+    vert[ 30] = new PVector(  0.5f,  -C3,  0.5f );
+    vert[ 31] = new PVector(  0.5f,  -C3, -0.5f );
+    vert[ 32] = new PVector( -0.5f,   C3,  0.5f );
+    vert[ 33] = new PVector( -0.5f,   C3, -0.5f );
+    vert[ 34] = new PVector( -0.5f,  -C3,  0.5f );
+    vert[ 35] = new PVector( -0.5f,  -C3, -0.5f );
+    vert[ 36] = new PVector(   C1,   C2,  1.0f );
+    vert[ 37] = new PVector(   C1,   C2, -1.0f );
+    vert[ 38] = new PVector(   C1,  -C2,  1.0f );
+    vert[ 39] = new PVector(   C1,  -C2, -1.0f );
+    vert[ 40] = new PVector(  -C1,   C2,  1.0f );
+    vert[ 41] = new PVector(  -C1,   C2, -1.0f );
+    vert[ 42] = new PVector(  -C1,  -C2,  1.0f );
+    vert[ 43] = new PVector(  -C1,  -C2, -1.0f );
+    vert[ 44] = new PVector(  1.0f,   C1,   C2 );
+    vert[ 45] = new PVector(  1.0f,   C1,  -C2 );
+    vert[ 46] = new PVector(  1.0f,  -C1,   C2 );
+    vert[ 47] = new PVector(  1.0f,  -C1,  -C2 );
+    vert[ 48] = new PVector( -1.0f,   C1,   C2 );
+    vert[ 49] = new PVector( -1.0f,   C1,  -C2 );
+    vert[ 50] = new PVector( -1.0f,  -C1,   C2 );
+    vert[ 51] = new PVector( -1.0f,  -C1,  -C2 );
+    vert[ 52] = new PVector(   C2,  1.0f,   C1 );
+    vert[ 53] = new PVector(   C2,  1.0f,  -C1 );
+    vert[ 54] = new PVector(   C2, -1.0f,   C1 );
+    vert[ 55] = new PVector(   C2, -1.0f,  -C1 );
+    vert[ 56] = new PVector(  -C2,  1.0f,   C1 );
+    vert[ 57] = new PVector(  -C2,  1.0f,  -C1 );
+    vert[ 58] = new PVector(  -C2, -1.0f,   C1 );
+    vert[ 59] = new PVector(  -C2, -1.0f,  -C1 );
+    // set faces
+    faces[ 0] = new int[] {  0, 42, 10, 55,  5, 44 };
+    faces[ 1] = new int[] {  0, 46,  4, 53,  8, 40 };
+    faces[ 2] = new int[] {  2, 36,  8, 57,  6, 50 };
+    faces[ 3] = new int[] {  2, 48,  7, 59, 10, 38 };
+    faces[ 4] = new int[] { 15, 13, 53, 20, 22, 55 };
+    faces[ 5] = new int[] { 15, 19, 49, 33, 29, 45 };
+    faces[ 6] = new int[] { 17, 13, 47, 31, 35, 51 };
+    faces[ 7] = new int[] { 17, 19, 59, 26, 24, 57 };
+    faces[ 8] = new int[] { 30, 46, 12, 16, 50, 34 };
+    faces[ 9] = new int[] { 30, 42, 26, 27, 43, 31 };
+    faces[10] = new int[] { 32, 48, 18, 14, 44, 28 };
+    faces[11] = new int[] { 32, 36, 20, 21, 37, 33 };
+    faces[12] = new int[] { 39, 23, 22, 38, 34, 35 }; //added 6x 4th number to fill gap
+    faces[13] = new int[] { 39, 11, 58,  7, 49,  3 }; //added 6x 4th number to fill gap
+    faces[14] = new int[] { 41, 25, 24, 40, 28, 29 }; //added 6x 4th number to fill gap
+    faces[15] = new int[] { 41,  9, 52,  4, 47,  1 }; //added 6x 4th number to fill gap
+    faces[16] = new int[] { 54, 11, 43,  1, 45,  5 }; //added 6x 4th number to fill gap
+    faces[17] = new int[] { 54, 23, 21, 52, 12, 14 }; //added 6x 4th number to fill gap
+    faces[18] = new int[] { 56,  9, 37,  3, 51,  6 }; //added 6x 4th number to fill gap
+    faces[19] = new int[] { 56, 25, 27, 58, 18, 16 }; //added 6x 4th number to fill gap
+    faces[20] = new int[] {  0, 42, 30, 46, 46, 46 }; //added 2x 4th number to fill gap
+    faces[21] = new int[] {  0, 44, 28, 40, 40, 40 }; //added 2x 4th number to fill gap
+    faces[22] = new int[] {  1, 41, 29, 45, 45, 45 }; //added 2x 4th number to fill gap
+    faces[23] = new int[] {  1, 47, 31, 43, 43, 43 }; //added 2x 4th number to fill gap
+    faces[24] = new int[] {  3, 39, 35, 51, 51, 51 }; //added 2x 4th number to fill gap
+    faces[25] = new int[] {  3, 49, 33, 37, 37, 37 }; //added 2x 4th number to fill gap
+    faces[26] = new int[] {  5, 44, 14, 54, 54, 54 }; //added 2x 4th number to fill gap
+    faces[27] = new int[] {  5, 55, 15, 45, 45, 45 }; //added 2x 4th number to fill gap
+    faces[28] = new int[] {  6, 50, 16, 56, 56, 56 }; //added 2x 4th number to fill gap
+    faces[29] = new int[] {  6, 57, 17, 51, 51, 51 }; //added 2x 4th number to fill gap
+    faces[30] = new int[] {  7, 49, 19, 59, 59, 59 }; //added 2x 4th number to fill gap
+    faces[31] = new int[] {  7, 58, 18, 48, 48, 48 }; //added 2x 4th number to fill gap
+    faces[32] = new int[] {  8, 36, 20, 53, 53, 53 }; //added 2x 4th number to fill gap
+    faces[33] = new int[] {  8, 57, 24, 40, 40, 40 }; //added 2x 4th number to fill gap
+    faces[34] = new int[] {  9, 41, 25, 56, 56, 56 }; //added 2x 4th number to fill gap
+    faces[35] = new int[] {  9, 52, 21, 37, 37, 37 }; //added 2x 4th number to fill gap
+    faces[36] = new int[] { 11, 39, 23, 54, 54, 54 }; //added 2x 4th number to fill gap
+    faces[37] = new int[] { 11, 58, 27, 43, 43, 43 }; //added 2x 4th number to fill gap
+    faces[38] = new int[] { 12, 16, 18, 14, 14, 14 }; //added 2x 4th number to fill gap
+    faces[39] = new int[] { 12, 46,  4, 52, 52, 52 }; //added 2x 4th number to fill gap
+    faces[40] = new int[] { 13, 15, 19, 17, 17, 17 }; //added 2x 4th number to fill gap
+    faces[41] = new int[] { 13, 53,  4, 47, 47, 47 }; //added 2x 4th number to fill gap
+    faces[42] = new int[] { 22, 23, 21, 20, 20, 20 }; //added 2x 4th number to fill gap
+    faces[43] = new int[] { 22, 38, 10, 55, 55, 55 }; //added 2x 4th number to fill gap
+    faces[44] = new int[] { 26, 24, 25, 27, 27, 27 }; //added 2x 4th number to fill gap
+    faces[45] = new int[] { 26, 59, 10, 42, 42, 42 }; //added 2x 4th number to fill gap
+    faces[46] = new int[] { 32, 28, 29, 33, 33, 33 }; //added 2x 4th number to fill gap
+    faces[47] = new int[] { 32, 48,  2, 36, 36, 36 }; //added 2x 4th number to fill gap
+    faces[48] = new int[] { 34, 35, 31, 30, 30, 30 }; //added 2x 4th number to fill gap
+    faces[49] = new int[] { 34, 38,  2, 50, 50, 50 }; //added 2x 4th number to fill gap
+  } //end Rhombicosahedron()
+
+  public String name() {
+    return "Rhombicosahedron";
+  }
+
+  public void render() {  
+    if (nofill) {
+      noFill();
+    } else {
+      fill(fc0, fc1, fc2, fc3);
+    }
+        
+    if (nostroke) {
+      noStroke();
+    } else {
+      stroke(sc0, sc1, sc2, sc3);
+    }
+    
+    if (parentSphere) {
+      //Get parent sphere radius
+      r = radius + stray;
+      //Convert spherical coordinates into Cartesian coordinates
+      x = cos(theta) * sin(phi) * r;
+      y = sin(theta) * sin(phi) * r;
+      z = cos(phi) * r;
+    }
+    
+    pushMatrix();
+    translate(x, y, z);
+    scale(scaleSize * zoom); 
+    strokeWeight(sw);
+    rotateX(rx);
+    rotateY(ry);
+    rotateZ(rz);
+    for (int i = 0; i < FACES; i = i+1) {
+      beginShape();
+      for (int i2 = 0; i2 < VERTICES; i2 = i2+1) {
+        vertex(vert[faces[i][i2]].x,vert[faces[i][i2]].y,vert[faces[i][i2]].z);
+      } // end for
+      endShape(CLOSE);
+    } // end for 
+    popMatrix();
+  } //end render()
+   
+} //end class Rhombicosahedron
 /*
 Rhombicosidodecahedron class
 
@@ -8422,6 +9055,168 @@ public class SmallDodecahemidodecahedron extends Polyhedron {
   } //end render()
    
 } //end class SmallDodecahemidodecahedron
+/*
+SmallDodecicosahedron class
+
+david cool
+http://davidcool.com
+http://generactive.net
+http://mystic.codes
+*/
+
+public class SmallDodecicosahedron extends Polyhedron {
+  
+  // polyhedron
+  final int FACES = 32;     // number of faces 
+  final int VERTICES = 10;   // VERTICES per face
+  final float C0 = 0.309016994374947424102293417183f;  //(sqrt(5) - 1) / 4
+  final float C1 = 1.11803398874989484820458683437f;   //sqrt(5) / 2
+  final float C2 = 1.30901699437494742410229341718f;   //(3 + sqrt(5)) / 4
+  final float C3 = 1.61803398874989484820458683437f;   //(1 + sqrt(5)) / 2
+  private PVector[] vert = new PVector[60]; // list of ve//rtices
+  private int[][] faces =  new int[FACES][VERTICES];  // list of faces (joining vertices)
+  
+  private SmallDodecicosahedron() {   
+    // set vertices
+    vert[  0] = new PVector(  0.5f,   C0,   C3 );
+    vert[  1] = new PVector(  0.5f,   C0,  -C3 );
+    vert[  2] = new PVector(  0.5f,  -C0,   C3 );
+    vert[  3] = new PVector(  0.5f,  -C0,  -C3 );
+    vert[  4] = new PVector( -0.5f,   C0,   C3 );
+    vert[  5] = new PVector( -0.5f,   C0,  -C3 );
+    vert[  6] = new PVector( -0.5f,  -C0,   C3 );
+    vert[  7] = new PVector( -0.5f,  -C0,  -C3 );
+    vert[  8] = new PVector(   C3,  0.5f,   C0 );
+    vert[  9] = new PVector(   C3,  0.5f,  -C0 );
+    vert[ 10] = new PVector(   C3, -0.5f,   C0 );
+    vert[ 11] = new PVector(   C3, -0.5f,  -C0 );
+    vert[ 12] = new PVector(  -C3,  0.5f,   C0 );
+    vert[ 13] = new PVector(  -C3,  0.5f,  -C0 );
+    vert[ 14] = new PVector(  -C3, -0.5f,   C0 );
+    vert[ 15] = new PVector(  -C3, -0.5f,  -C0 );
+    vert[ 16] = new PVector(   C0,   C3,  0.5f );
+    vert[ 17] = new PVector(   C0,   C3, -0.5f );
+    vert[ 18] = new PVector(   C0,  -C3,  0.5f );
+    vert[ 19] = new PVector(   C0,  -C3, -0.5f );
+    vert[ 20] = new PVector(  -C0,   C3,  0.5f );
+    vert[ 21] = new PVector(  -C0,   C3, -0.5f );
+    vert[ 22] = new PVector(  -C0,  -C3,  0.5f );
+    vert[ 23] = new PVector(  -C0,  -C3, -0.5f );
+    vert[ 24] = new PVector(  0.0f,   C1,   C2 );
+    vert[ 25] = new PVector(  0.0f,   C1,  -C2 );
+    vert[ 26] = new PVector(  0.0f,  -C1,   C2 );
+    vert[ 27] = new PVector(  0.0f,  -C1,  -C2 );
+    vert[ 28] = new PVector(   C2,  0.0f,   C1 );
+    vert[ 29] = new PVector(   C2,  0.0f,  -C1 );
+    vert[ 30] = new PVector(  -C2,  0.0f,   C1 );
+    vert[ 31] = new PVector(  -C2,  0.0f,  -C1 );
+    vert[ 32] = new PVector(   C1,   C2,  0.0f );
+    vert[ 33] = new PVector(   C1,  -C2,  0.0f );
+    vert[ 34] = new PVector(  -C1,   C2,  0.0f );
+    vert[ 35] = new PVector(  -C1,  -C2,  0.0f );
+    vert[ 36] = new PVector(  1.0f,  0.5f,   C2 );
+    vert[ 37] = new PVector(  1.0f,  0.5f,  -C2 );
+    vert[ 38] = new PVector(  1.0f, -0.5f,   C2 );
+    vert[ 39] = new PVector(  1.0f, -0.5f,  -C2 );
+    vert[ 40] = new PVector( -1.0f,  0.5f,   C2 );
+    vert[ 41] = new PVector( -1.0f,  0.5f,  -C2 );
+    vert[ 42] = new PVector( -1.0f, -0.5f,   C2 );
+    vert[ 43] = new PVector( -1.0f, -0.5f,  -C2 );
+    vert[ 44] = new PVector(   C2,  1.0f,  0.5f );
+    vert[ 45] = new PVector(   C2,  1.0f, -0.5f );
+    vert[ 46] = new PVector(   C2, -1.0f,  0.5f );
+    vert[ 47] = new PVector(   C2, -1.0f, -0.5f );
+    vert[ 48] = new PVector(  -C2,  1.0f,  0.5f );
+    vert[ 49] = new PVector(  -C2,  1.0f, -0.5f );
+    vert[ 50] = new PVector(  -C2, -1.0f,  0.5f );
+    vert[ 51] = new PVector(  -C2, -1.0f, -0.5f );
+    vert[ 52] = new PVector(  0.5f,   C2,  1.0f );
+    vert[ 53] = new PVector(  0.5f,   C2, -1.0f );
+    vert[ 54] = new PVector(  0.5f,  -C2,  1.0f );
+    vert[ 55] = new PVector(  0.5f,  -C2, -1.0f );
+    vert[ 56] = new PVector( -0.5f,   C2,  1.0f );
+    vert[ 57] = new PVector( -0.5f,   C2, -1.0f );
+    vert[ 58] = new PVector( -0.5f,  -C2,  1.0f );
+    vert[ 59] = new PVector( -0.5f,  -C2, -1.0f );
+    // set faces
+    faces[ 0] = new int[] {  0,  4, 30, 14, 51, 59, 55, 47, 10, 28 };
+    faces[ 1] = new int[] {  0, 38, 46, 47, 39,  1, 25, 21, 20, 24 };
+    faces[ 2] = new int[] {  2, 26, 22, 23, 27,  3, 37, 45, 44, 36 };
+    faces[ 3] = new int[] {  2, 28,  8, 45, 53, 57, 49, 12, 30,  6 };
+    faces[ 4] = new int[] {  5,  1, 29, 11, 46, 54, 58, 50, 15, 31 };
+    faces[ 5] = new int[] {  5, 43, 51, 50, 42,  4, 24, 16, 17, 25 };
+    faces[ 6] = new int[] {  7, 27, 19, 18, 26,  6, 40, 48, 49, 41 };
+    faces[ 7] = new int[] {  7, 31, 13, 48, 56, 52, 44,  9, 29,  3 };
+    faces[ 8] = new int[] { 33, 11,  9, 32, 16, 56, 40, 42, 58, 18 };
+    faces[ 9] = new int[] { 33, 19, 59, 43, 41, 57, 17, 32,  8, 10 };
+    faces[10] = new int[] { 34, 13, 15, 35, 22, 54, 38, 36, 52, 20 };
+    faces[11] = new int[] { 34, 21, 53, 37, 39, 55, 23, 35, 14, 12 };
+    faces[12] = new int[] {  0,  4, 42, 58, 54, 38, 38, 38, 38, 38 }; //added 4x 6th number to fill gap
+    faces[13] = new int[] {  0, 28,  8, 32, 16, 24, 24, 24, 24, 24 }; //added 4x 6th number to fill gap
+    faces[14] = new int[] {  3,  7, 41, 57, 53, 37, 37, 37, 37, 37 }; //added 4x 6th number to fill gap
+    faces[15] = new int[] {  3, 29, 11, 33, 19, 27, 27, 27, 27, 27 }; //added 4x 6th number to fill gap
+    faces[16] = new int[] { 17, 32,  9, 29,  1, 25, 25, 25, 25, 25 }; //added 4x 6th number to fill gap
+    faces[17] = new int[] { 17, 57, 49, 48, 56, 16, 16, 16, 16, 16 }; //added 4x 6th number to fill gap
+    faces[18] = new int[] { 18, 33, 10, 28,  2, 26, 26, 26, 26, 26 }; //added 4x 6th number to fill gap
+    faces[19] = new int[] { 18, 58, 50, 51, 59, 19, 19, 19, 19, 19 }; //added 4x 6th number to fill gap
+    faces[20] = new int[] { 34, 12, 30,  4, 24, 20, 20, 20, 20, 20 }; //added 4x 6th number to fill gap
+    faces[21] = new int[] { 34, 21, 25,  5, 31, 13, 13, 13, 13, 13 }; //added 4x 6th number to fill gap
+    faces[22] = new int[] { 35, 15, 31,  7, 27, 23, 23, 23, 23, 23 }; //added 4x 6th number to fill gap
+    faces[23] = new int[] { 35, 22, 26,  6, 30, 14, 14, 14, 14, 14 }; //added 4x 6th number to fill gap
+    faces[24] = new int[] { 40,  6,  2, 36, 52, 56, 56, 56, 56, 56 }; //added 4x 6th number to fill gap
+    faces[25] = new int[] { 40, 48, 13, 15, 50, 42, 42, 42, 42, 42 }; //added 4x 6th number to fill gap
+    faces[26] = new int[] { 43,  5,  1, 39, 55, 59, 59, 59, 59, 59 }; //added 4x 6th number to fill gap
+    faces[27] = new int[] { 43, 51, 14, 12, 49, 41, 41, 41, 41, 41 }; //added 4x 6th number to fill gap
+    faces[28] = new int[] { 44, 36, 38, 46, 11,  9,  9,  9,  9,  9 }; //added 4x 6th number to fill gap
+    faces[29] = new int[] { 44, 45, 53, 21, 20, 52, 52, 52, 52, 52 }; //added 4x 6th number to fill gap
+    faces[30] = new int[] { 47, 39, 37, 45,  8, 10, 10, 10, 10, 10 }; //added 4x 6th number to fill gap
+    faces[31] = new int[] { 47, 46, 54, 22, 23, 55, 55, 55, 55, 55 }; //added 4x 6th number to fill gap
+  } //end SmallDodecicosahedron()
+
+  public String name() {
+    return "Small Dodecicosahedron";
+  }
+
+  public void render() {  
+    if (nofill) {
+      noFill();
+    } else {
+      fill(fc0, fc1, fc2, fc3);
+    }
+        
+    if (nostroke) {
+      noStroke();
+    } else {
+      stroke(sc0, sc1, sc2, sc3);
+    }
+    
+    if (parentSphere) {
+      //Get parent sphere radius
+      r = radius + stray;
+      //Convert spherical coordinates into Cartesian coordinates
+      x = cos(theta) * sin(phi) * r;
+      y = sin(theta) * sin(phi) * r;
+      z = cos(phi) * r;
+    }
+    
+    pushMatrix();
+    translate(x, y, z);
+    scale(scaleSize * zoom); 
+    strokeWeight(sw);
+    rotateX(rx);
+    rotateY(ry);
+    rotateZ(rz);
+    for (int i = 0; i < FACES; i = i+1) {
+      beginShape();
+      for (int i2 = 0; i2 < VERTICES; i2 = i2+1) {
+        vertex(vert[faces[i][i2]].x,vert[faces[i][i2]].y,vert[faces[i][i2]].z);
+      } // end for
+      endShape(CLOSE);
+    } // end for 
+    popMatrix();
+  } //end render()
+   
+} //end class SmallDodecicosahedron
 /*
 SmallDodecicosidodecahedron class
 
@@ -9650,6 +10445,288 @@ public class SmallRetrosnubIcosicosidodecahedron extends Polyhedron {
   } //end render()
    
 } //end class SmallRetrosnubIcosicosidodecahedron
+/*
+SmallRhombidodecahedron class
+
+david cool
+http://davidcool.com
+http://generactive.net
+http://mystic.codes
+*/
+
+public class SmallRhombidodecahedron extends Polyhedron {
+  
+  // polyhedron
+  final int FACES = 42;     // number of faces 
+  final int VERTICES = 10;   // VERTICES per face
+  final float C0 = 0.809016994374947424102293417183f;  //(1 + sqrt(5)) / 4
+  final float C1 = 1.30901699437494742410229341718f;   //(3 + sqrt(5)) / 4
+  final float C2 = 1.61803398874989484820458683437f;   //(1 + sqrt(5)) / 2
+  final float C3 = 1.80901699437494742410229341718f;   //(5 + sqrt(5)) / 4
+  final float C4 = 2.11803398874989484820458683437f;   //(2 + sqrt(5)) / 2
+  private PVector[] vert = new PVector[60]; // list of ve//rtices
+  private int[][] faces =  new int[FACES][VERTICES];  // list of faces (joining vertices)
+  
+  private SmallRhombidodecahedron() {   
+    // set vertices
+    vert[  0] = new PVector(  0.5f,  0.5f,   C4 );
+    vert[  1] = new PVector(  0.5f,  0.5f,  -C4 );
+    vert[  2] = new PVector(  0.5f, -0.5f,   C4 );
+    vert[  3] = new PVector(  0.5f, -0.5f,  -C4 );
+    vert[  4] = new PVector( -0.5f,  0.5f,   C4 );
+    vert[  5] = new PVector( -0.5f,  0.5f,  -C4 );
+    vert[  6] = new PVector( -0.5f, -0.5f,   C4 );
+    vert[  7] = new PVector( -0.5f, -0.5f,  -C4 );
+    vert[  8] = new PVector(   C4,  0.5f,  0.5f );
+    vert[  9] = new PVector(   C4,  0.5f, -0.5f );
+    vert[ 10] = new PVector(   C4, -0.5f,  0.5f );
+    vert[ 11] = new PVector(   C4, -0.5f, -0.5f );
+    vert[ 12] = new PVector(  -C4,  0.5f,  0.5f );
+    vert[ 13] = new PVector(  -C4,  0.5f, -0.5f );
+    vert[ 14] = new PVector(  -C4, -0.5f,  0.5f );
+    vert[ 15] = new PVector(  -C4, -0.5f, -0.5f );
+    vert[ 16] = new PVector(  0.5f,   C4,  0.5f );
+    vert[ 17] = new PVector(  0.5f,   C4, -0.5f );
+    vert[ 18] = new PVector(  0.5f,  -C4,  0.5f );
+    vert[ 19] = new PVector(  0.5f,  -C4, -0.5f );
+    vert[ 20] = new PVector( -0.5f,   C4,  0.5f );
+    vert[ 21] = new PVector( -0.5f,   C4, -0.5f );
+    vert[ 22] = new PVector( -0.5f,  -C4,  0.5f );
+    vert[ 23] = new PVector( -0.5f,  -C4, -0.5f );
+    vert[ 24] = new PVector(  0.0f,   C1,   C3 );
+    vert[ 25] = new PVector(  0.0f,   C1,  -C3 );
+    vert[ 26] = new PVector(  0.0f,  -C1,   C3 );
+    vert[ 27] = new PVector(  0.0f,  -C1,  -C3 );
+    vert[ 28] = new PVector(   C3,  0.0f,   C1 );
+    vert[ 29] = new PVector(   C3,  0.0f,  -C1 );
+    vert[ 30] = new PVector(  -C3,  0.0f,   C1 );
+    vert[ 31] = new PVector(  -C3,  0.0f,  -C1 );
+    vert[ 32] = new PVector(   C1,   C3,  0.0f );
+    vert[ 33] = new PVector(   C1,  -C3,  0.0f );
+    vert[ 34] = new PVector(  -C1,   C3,  0.0f );
+    vert[ 35] = new PVector(  -C1,  -C3,  0.0f );
+    vert[ 36] = new PVector(   C1,   C0,   C2 );
+    vert[ 37] = new PVector(   C1,   C0,  -C2 );
+    vert[ 38] = new PVector(   C1,  -C0,   C2 );
+    vert[ 39] = new PVector(   C1,  -C0,  -C2 );
+    vert[ 40] = new PVector(  -C1,   C0,   C2 );
+    vert[ 41] = new PVector(  -C1,   C0,  -C2 );
+    vert[ 42] = new PVector(  -C1,  -C0,   C2 );
+    vert[ 43] = new PVector(  -C1,  -C0,  -C2 );
+    vert[ 44] = new PVector(   C2,   C1,   C0 );
+    vert[ 45] = new PVector(   C2,   C1,  -C0 );
+    vert[ 46] = new PVector(   C2,  -C1,   C0 );
+    vert[ 47] = new PVector(   C2,  -C1,  -C0 );
+    vert[ 48] = new PVector(  -C2,   C1,   C0 );
+    vert[ 49] = new PVector(  -C2,   C1,  -C0 );
+    vert[ 50] = new PVector(  -C2,  -C1,   C0 );
+    vert[ 51] = new PVector(  -C2,  -C1,  -C0 );
+    vert[ 52] = new PVector(   C0,   C2,   C1 );
+    vert[ 53] = new PVector(   C0,   C2,  -C1 );
+    vert[ 54] = new PVector(   C0,  -C2,   C1 );
+    vert[ 55] = new PVector(   C0,  -C2,  -C1 );
+    vert[ 56] = new PVector(  -C0,   C2,   C1 );
+    vert[ 57] = new PVector(  -C0,   C2,  -C1 );
+    vert[ 58] = new PVector(  -C0,  -C2,   C1 );
+    vert[ 59] = new PVector(  -C0,  -C2,  -C1 );
+    // set faces
+    faces[ 0] = new int[] {  0, 24, 56, 48, 12, 14, 50, 58, 26,  2 };
+    faces[ 1] = new int[] {  0, 36, 44, 32, 17, 21, 34, 48, 40,  4 };
+    faces[ 2] = new int[] {  7,  3, 39, 47, 33, 18, 22, 35, 51, 43 };
+    faces[ 3] = new int[] {  7,  5, 25, 53, 45,  9, 11, 47, 55, 27 };
+    faces[ 4] = new int[] { 10,  8, 44, 52, 24,  4,  6, 26, 54, 46 };
+    faces[ 5] = new int[] { 10, 11, 29, 37, 53, 17, 16, 52, 36, 28 };
+    faces[ 6] = new int[] { 13, 31, 43, 59, 23, 22, 58, 42, 30, 12 };
+    faces[ 7] = new int[] { 13, 49, 57, 25,  1,  3, 27, 59, 51, 15 };
+    faces[ 8] = new int[] { 19, 33, 46, 38,  2,  6, 42, 50, 35, 23 };
+    faces[ 9] = new int[] { 19, 55, 39, 29,  9,  8, 28, 38, 54, 18 };
+    faces[10] = new int[] { 20, 16, 32, 45, 37,  1,  5, 41, 49, 34 };
+    faces[11] = new int[] { 20, 21, 57, 41, 31, 15, 14, 30, 40, 56 };
+    faces[12] = new int[] { 24,  0, 36, 52, 52, 52, 52, 52, 52, 52 }; //added 6x 4th number to fill gap
+    faces[13] = new int[] { 24, 56, 40,  4,  4,  4,  4,  4,  4,  4 }; //added 6x 4th number to fill gap
+    faces[14] = new int[] { 25,  5, 41, 57, 57, 57, 57, 57, 57, 57 }; //added 6x 4th number to fill gap
+    faces[15] = new int[] { 25, 53, 37,  1,  1,  1,  1,  1,  1,  1 }; //added 6x 4th number to fill gap
+    faces[16] = new int[] { 26,  6, 42, 58, 58, 58, 58, 58, 58, 58 }; //added 6x 4th number to fill gap
+    faces[17] = new int[] { 26, 54, 38,  2,  2,  2,  2,  2,  2,  2 }; //added 6x 4th number to fill gap
+    faces[18] = new int[] { 27,  3, 39, 55, 55, 55, 55, 55, 55, 55 }; //added 6x 4th number to fill gap
+    faces[19] = new int[] { 27, 59, 43,  7,  7,  7,  7,  7,  7,  7 }; //added 6x 4th number to fill gap
+    faces[20] = new int[] { 28,  8, 44, 36, 36, 36, 36, 36, 36, 36 }; //added 6x 4th number to fill gap
+    faces[21] = new int[] { 28, 38, 46, 10, 10, 10, 10, 10, 10, 10 }; //added 6x 4th number to fill gap
+    faces[22] = new int[] { 29, 11, 47, 39, 39, 39, 39, 39, 39, 39 }; //added 6x 4th number to fill gap
+    faces[23] = new int[] { 29, 37, 45,  9,  9,  9,  9,  9,  9,  9 }; //added 6x 4th number to fill gap
+    faces[24] = new int[] { 30, 14, 50, 42, 42, 42, 42, 42, 42, 42 }; //added 6x 4th number to fill gap
+    faces[25] = new int[] { 30, 40, 48, 12, 12, 12, 12, 12, 12, 12 }; //added 6x 4th number to fill gap
+    faces[26] = new int[] { 31, 13, 49, 41, 41, 41, 41, 41, 41, 41 }; //added 6x 4th number to fill gap
+    faces[27] = new int[] { 31, 43, 51, 15, 15, 15, 15, 15, 15, 15 }; //added 6x 4th number to fill gap
+    faces[28] = new int[] { 32, 16, 52, 44, 44, 44, 44, 44, 44, 44 }; //added 6x 4th number to fill gap
+    faces[29] = new int[] { 32, 45, 53, 17, 17, 17, 17, 17, 17, 17 }; //added 6x 4th number to fill gap
+    faces[30] = new int[] { 33, 19, 55, 47, 47, 47, 47, 47, 47, 47 }; //added 6x 4th number to fill gap
+    faces[31] = new int[] { 33, 46, 54, 18, 18, 18, 18, 18, 18, 18 }; //added 6x 4th number to fill gap
+    faces[32] = new int[] { 34, 21, 57, 49, 49, 49, 49, 49, 49, 49 }; //added 6x 4th number to fill gap
+    faces[33] = new int[] { 34, 48, 56, 20, 20, 20, 20, 20, 20, 20 }; //added 6x 4th number to fill gap
+    faces[34] = new int[] { 35, 22, 58, 50, 50, 50, 50, 50, 50, 50 }; //added 6x 4th number to fill gap
+    faces[35] = new int[] { 35, 51, 59, 23, 23, 23, 23, 23, 23, 23 }; //added 6x 4th number to fill gap
+    faces[36] = new int[] {  0,  4,  6,  2,  2,  2,  2,  2,  2,  2 }; //added 6x 4th number to fill gap
+    faces[37] = new int[] {  1,  3,  7,  5,  5,  5,  5,  5,  5,  5 }; //added 6x 4th number to fill gap
+    faces[38] = new int[] {  8, 10, 11,  9,  9,  9,  9,  9,  9,  9 }; //added 6x 4th number to fill gap
+    faces[39] = new int[] { 12, 13, 15, 14, 14, 14, 14, 14, 14, 14 }; //added 6x 4th number to fill gap
+    faces[40] = new int[] { 16, 17, 21, 20, 20, 20, 20, 20, 20, 20 }; //added 6x 4th number to fill gap
+    faces[41] = new int[] { 18, 22, 23, 19, 19, 19, 19, 19, 19, 19 }; //added 6x 4th number to fill gap
+  } //end SmallRhombidodecahedron()
+
+  public String name() {
+    return "Small Rhombidodecahedron";
+  }
+
+  public void render() {  
+    if (nofill) {
+      noFill();
+    } else {
+      fill(fc0, fc1, fc2, fc3);
+    }
+        
+    if (nostroke) {
+      noStroke();
+    } else {
+      stroke(sc0, sc1, sc2, sc3);
+    }
+    
+    if (parentSphere) {
+      //Get parent sphere radius
+      r = radius + stray;
+      //Convert spherical coordinates into Cartesian coordinates
+      x = cos(theta) * sin(phi) * r;
+      y = sin(theta) * sin(phi) * r;
+      z = cos(phi) * r;
+    }
+    
+    pushMatrix();
+    translate(x, y, z);
+    scale(scaleSize * zoom); 
+    strokeWeight(sw);
+    rotateX(rx);
+    rotateY(ry);
+    rotateZ(rz);
+    for (int i = 0; i < FACES; i = i+1) {
+      beginShape();
+      for (int i2 = 0; i2 < VERTICES; i2 = i2+1) {
+        vertex(vert[faces[i][i2]].x,vert[faces[i][i2]].y,vert[faces[i][i2]].z);
+      } // end for
+      endShape(CLOSE);
+    } // end for 
+    popMatrix();
+  } //end render()
+   
+} //end class SmallRhombidodecahedron
+/*
+SmallRhombihexahedron class
+
+david cool
+http://davidcool.com
+http://generactive.net
+http://mystic.codes
+*/
+
+public class SmallRhombihexahedron extends Polyhedron {
+  
+  // polyhedron
+  final int FACES = 18;     // number of faces 
+  final int VERTICES = 8;   // VERTICES per face
+  final float C0 = 1.20710678118654752440084436210f;  //1 + sqrt(2)) / 2
+  private PVector[] vert = new PVector[24]; // list of ve//rtices
+  private int[][] faces =  new int[FACES][VERTICES];  // list of faces (joining vertices)
+  
+  private SmallRhombihexahedron() {   
+    // set vertices
+    vert[  0] = new PVector(  0.5f,  0.5f,   C0 );
+    vert[  1] = new PVector(  0.5f,  0.5f,  -C0 );
+    vert[  2] = new PVector(  0.5f, -0.5f,   C0 );
+    vert[  3] = new PVector(  0.5f, -0.5f,  -C0 );
+    vert[  4] = new PVector( -0.5f,  0.5f,   C0 );
+    vert[  5] = new PVector( -0.5f,  0.5f,  -C0 );
+    vert[  6] = new PVector( -0.5f, -0.5f,   C0 );
+    vert[  7] = new PVector( -0.5f, -0.5f,  -C0 );
+    vert[  8] = new PVector(   C0,  0.5f,  0.5f );
+    vert[  9] = new PVector(   C0,  0.5f, -0.5f );
+    vert[ 10] = new PVector(   C0, -0.5f,  0.5f );
+    vert[ 11] = new PVector(   C0, -0.5f, -0.5f );
+    vert[ 12] = new PVector(  -C0,  0.5f,  0.5f );
+    vert[ 13] = new PVector(  -C0,  0.5f, -0.5f );
+    vert[ 14] = new PVector(  -C0, -0.5f,  0.5f );
+    vert[ 15] = new PVector(  -C0, -0.5f, -0.5f );
+    vert[ 16] = new PVector(  0.5f,   C0,  0.5f );
+    vert[ 17] = new PVector(  0.5f,   C0, -0.5f );
+    vert[ 18] = new PVector(  0.5f,  -C0,  0.5f );
+    vert[ 19] = new PVector(  0.5f,  -C0, -0.5f );
+    vert[ 20] = new PVector( -0.5f,   C0,  0.5f );
+    vert[ 21] = new PVector( -0.5f,   C0, -0.5f );
+    vert[ 22] = new PVector( -0.5f,  -C0,  0.5f );
+    vert[ 23] = new PVector( -0.5f,  -C0, -0.5f );
+    // set faces
+    faces[ 0] = new int[] {  0,  2, 18, 19,  3,  1, 17, 16 };
+    faces[ 1] = new int[] {  0,  8,  9,  1,  5, 13, 12,  4 };
+    faces[ 2] = new int[] { 14, 15,  7,  3, 11, 10,  2,  6 };
+    faces[ 3] = new int[] { 14, 22, 18, 10,  8, 16, 20, 12 };
+    faces[ 4] = new int[] { 21,  5,  7, 23, 22,  6,  4, 20 };
+    faces[ 5] = new int[] { 21, 17,  9, 11, 19, 23, 15, 13 };
+    faces[ 6] = new int[] {  0,  2, 10,  8,  8,  8,  8,  8 }; //added 4x 4th number to fill gap
+    faces[ 7] = new int[] {  0, 16, 20,  4,  4,  4,  4,  4 }; //added 4x 4th number to fill gap
+    faces[ 8] = new int[] {  7,  3, 19, 23, 23, 23, 23, 23 }; //added 4x 4th number to fill gap
+    faces[ 9] = new int[] {  7, 15, 13,  5,  5,  5,  5,  5 }; //added 4x 4th number to fill gap
+    faces[10] = new int[] { 11,  3,  1,  9,  9,  9,  9,  9 }; //added 4x 4th number to fill gap
+    faces[11] = new int[] { 11, 10, 18, 19, 19, 19, 19, 19 }; //added 4x 4th number to fill gap
+    faces[12] = new int[] { 12, 14,  6,  4,  4,  4,  4,  4 }; //added 4x 4th number to fill gap
+    faces[13] = new int[] { 12, 20, 21, 13, 13, 13, 13, 13 }; //added 4x 4th number to fill gap
+    faces[14] = new int[] { 17,  1,  5, 21, 21, 21, 21, 21 }; //added 4x 4th number to fill gap
+    faces[15] = new int[] { 17, 16,  8,  9,  9,  9,  9,  9 }; //added 4x 4th number to fill gap
+    faces[16] = new int[] { 22, 14, 15, 23, 23, 23, 23, 23 }; //added 4x 4th number to fill gap
+    faces[17] = new int[] { 22, 18,  2,  6,  6,  6,  6,  6 }; //added 4x 4th number to fill gap
+  } //end SmallRhombihexahedron()
+
+  public String name() {
+    return "Small Rhombihexahedron";
+  }
+
+  public void render() {  
+    if (nofill) {
+      noFill();
+    } else {
+      fill(fc0, fc1, fc2, fc3);
+    }
+        
+    if (nostroke) {
+      noStroke();
+    } else {
+      stroke(sc0, sc1, sc2, sc3);
+    }
+    
+    if (parentSphere) {
+      //Get parent sphere radius
+      r = radius + stray;
+      //Convert spherical coordinates into Cartesian coordinates
+      x = cos(theta) * sin(phi) * r;
+      y = sin(theta) * sin(phi) * r;
+      z = cos(phi) * r;
+    }
+    
+    pushMatrix();
+    translate(x, y, z);
+    scale(scaleSize * zoom); 
+    strokeWeight(sw);
+    rotateX(rx);
+    rotateY(ry);
+    rotateZ(rz);
+    for (int i = 0; i < FACES; i = i+1) {
+      beginShape();
+      for (int i2 = 0; i2 < VERTICES; i2 = i2+1) {
+        vertex(vert[faces[i][i2]].x,vert[faces[i][i2]].y,vert[faces[i][i2]].z);
+      } // end for
+      endShape(CLOSE);
+    } // end for 
+    popMatrix();
+  } //end render()
+   
+} //end class SmallRhombihexahedron
 /*
 SmallSnubIcosicosidodecahedron class
 

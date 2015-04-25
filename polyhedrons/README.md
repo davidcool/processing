@@ -63,6 +63,15 @@ Polyhedron classes for Processing
 - Rhombidodecadodecahedron
 - Uniform Great Rhombicosidodecahedron
 
+#### Versi-Quasi-Regular Polyhedra
+- Small Rhombihexahedron
+- Great Rhombihexahedron
+- Small Dodecicosahedron
+- Great Dodecicosahedron
+- Small Rhombidodecahedron
+- Great Rhombidodecahedron
+- Rhombicosahedron
+
 #### Self-Intersecting Truncated Regular Polyhedra
 - Stellated Truncated Hexahedron
 - Truncated Great Dodecahedron

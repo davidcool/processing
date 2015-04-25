@@ -81,6 +81,14 @@ public void setup(){
   polyObjects.add(new GreatIcosicosidodecahedron());
   polyObjects.add(new Rhombidodecadodecahedron());
   polyObjects.add(new UniformGreatRhombicosidodecahedron());
+  //versi-quasi-regular polyhedra
+  polyObjects.add(new SmallRhombihexahedron());
+  polyObjects.add(new GreatRhombihexahedron());
+  polyObjects.add(new SmallDodecicosahedron());
+  polyObjects.add(new GreatDodecicosahedron());
+  polyObjects.add(new SmallRhombidodecahedron());
+  polyObjects.add(new GreatRhombidodecahedron());
+  polyObjects.add(new Rhombicosahedron());
   //self-intersecting truncated regular polyhedra
   polyObjects.add(new StellatedTruncatedHexahedron());
   polyObjects.add(new TruncatedGreatDodecahedron());

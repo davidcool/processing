@@ -28,7 +28,7 @@ void setup() {
   smooth();
   lights();
   background(0);
-  frameRate(30);
+  frameRate(15);
   noCursor();
   //create an instance of the Sphere Class
   for (int i = 0; i < 5; i++) {

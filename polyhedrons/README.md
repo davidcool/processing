@@ -37,6 +37,20 @@ Polyhedron classes for Processing
 - Small Icosihemidodecahedron
 - Great Icosihemidodecahedron
 
+#### Self-Intersecting Quasi-Quasi-Regular Polyhedra
+- Small Cubicuboctahedron
+- Great Cubicuboctahedron
+- Uniform Great Rhombicuboctahedron
+- Small Dodecicosidodecahedron
+- Great Dodecicosidodecahedron
+- Small Ditrigonal Dodecicosidodecahedron
+- Great Ditrigonal Dodecicosidodecahedron
+- Icosidodecadodecahedron
+- Small Icosicosidodecahedron
+- Great Icosicosidodecahedron
+- Rhombidodecadodecahedron
+- Uniform Great Rhombicosidodecahedron
+
 #### Self-Intersecting Truncated Regular Polyhedra
 - Stellated Truncated Hexahedron
 - Truncated Great Dodecahedron

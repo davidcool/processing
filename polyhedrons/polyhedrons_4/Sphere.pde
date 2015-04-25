@@ -12,13 +12,13 @@ class Sphere {
   };
   
   public void addSphereItem() {
-    Polyhedron si = new SmallHexagrammicHexecontahedron();
+    Polyhedron si = new RegularHexagonalToroid12faces();
     //Set random values for the spherical coordinates
     si.positionSphere(radius, random(PI * 2), random(PI * 2));
     //scale
     si.scaleFactor(5000);
     //fill
-    si.fillColor(int(random(255)), int(random(255)), int(random(255)), 30);
+    si.fillColor(int(random(255)), int(random(255)), int(random(255)), int(random(100)));
     //stroke
     si.noStrokeToggle(true);
     //si.strokeColor(int(random(255)), int(random(255)), int(random(255)), 255);
@@ -29,13 +29,13 @@ class Sphere {
   public void addSphereItem(String _type) {
     type = _type;
     if (type.equals("SmallHexagrammicHexecontahedron") == true) {
-      Polyhedron si = new SmallHexagrammicHexecontahedron();
+      Polyhedron si = new RegularHexagonalToroid12faces();
       //Set random values for the spherical coordinates
       si.positionSphere(radius, random(PI * 2), random(PI * 2));
       //scale
       si.scaleFactor(5000);
       //fill
-      si.fillColor(int(random(255)), int(random(255)), int(random(255)), 30);
+      si.fillColor(int(random(255)), int(random(255)), int(random(255)), int(random(100)));
       //stroke
       si.noStrokeToggle(true);
       //si.strokeColor(int(random(255)), int(random(255)), int(random(255)), 255);

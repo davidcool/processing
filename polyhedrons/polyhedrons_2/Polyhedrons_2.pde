@@ -18,13 +18,14 @@ public int num = 0;
 public PFont f;
 
 public void setup(){
-  size(1000,1000,OPENGL);
+  size(displayWidth,displayHeight,OPENGL);
   lights();
   smooth();
   frameRate(30);
   f = createFont("Arial",24,true);
   textFont(f,24);
   textAlign(CENTER);
+  noCursor();
   //Instantiate each object
   //platonic solids
   polyObjects.add(new Tetrahedron());
@@ -102,6 +103,7 @@ public void setup(){
 } //end setup()
 
 public void draw(){
+  noCursor();
   background(0);
   pointLight(200, 200, 600, width/2, height/2, 600);
   ambientLight(102, 102, 102);

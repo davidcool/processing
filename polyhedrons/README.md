@@ -79,6 +79,13 @@ Polyhedron classes for Processing
 - Great Stellated Truncated Dodecahedron
 - Truncated Great Icosahedron
 
+#### Self-Intersecting Truncated Quasi-Regular Polyhedra  
+- Cubitruncated Cuboctahedron
+- Great Truncated Cuboctahedron
+- Icositruncated Dodecadodecahedron
+- Truncated Dodecadodecahedron
+- Great Truncated Icosidodecahedron
+
 #### Self-Intersecting Snub Quasi-Regular Polyhedra
 - Snub Dodecadodecahedron
 - Inverted Snub Dodecadodecahedron

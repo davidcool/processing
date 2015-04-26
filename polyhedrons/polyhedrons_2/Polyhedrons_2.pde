@@ -95,6 +95,12 @@ public void setup(){
   polyObjects.add(new SmallStellatedTruncatedDodecahedron());
   polyObjects.add(new GreatStellatedTruncatedDodecahedron());
   polyObjects.add(new TruncatedGreatIcosahedron());
+  //self-intersecting truncated quasi-regular polyhedra
+  polyObjects.add(new CubitruncatedCuboctahedron());
+  polyObjects.add(new GreatTruncatedCuboctahedron());
+  polyObjects.add(new IcositruncatedDodecadodecahedron());
+  polyObjects.add(new TruncatedDodecadodecahedron());
+  polyObjects.add(new GreatTruncatedIcosidodecahedron());
   //self-intersecting snub quasi-regular polyhedra
   polyObjects.add(new SnubDodecadodecahedron());
   polyObjects.add(new InvertedSnubDodecadodecahedron());

@@ -42,62 +42,6 @@ Polyhedron classes for Processing
 - Snub Dodecahedron (laevo)
 - Truncated Icosidodecahedron
 
-#### Self-Intersecting Quasi-Regular Polyhedra
-- Ditrigonal Dodecadodecahedron
-- Small Ditrigonal Icosidodecahedron
-- Great Ditrigonal Icosidodecahedron
-- Dodecadodecahedron
-- Great Icosidodecahedron
-
-#### Self-Intersecting Quasi-Quasi-Regular Polyhedra
-- Small Cubicuboctahedron
-- Great Cubicuboctahedron
-- Uniform Great Rhombicuboctahedron
-- Small Dodecicosidodecahedron
-- Great Dodecicosidodecahedron
-- Small Ditrigonal Dodecicosidodecahedron
-- Great Ditrigonal Dodecicosidodecahedron
-- Icosidodecadodecahedron
-- Small Icosicosidodecahedron
-- Great Icosicosidodecahedron
-- Rhombidodecadodecahedron
-- Uniform Great Rhombicosidodecahedron
-
-#### Versi-Quasi-Regular Polyhedra
-- Small Rhombihexahedron
-- Great Rhombihexahedron
-- Small Dodecicosahedron
-- Great Dodecicosahedron
-- Small Rhombidodecahedron
-- Great Rhombidodecahedron
-- Rhombicosahedron
-
-#### Self-Intersecting Truncated Regular Polyhedra
-- Stellated Truncated Hexahedron
-- Truncated Great Dodecahedron
-- Small Stellated Truncated Dodecahedron
-- Great Stellated Truncated Dodecahedron
-- Truncated Great Icosahedron
-
-#### Self-Intersecting Truncated Quasi-Regular Polyhedra  
-- Cubitruncated Cuboctahedron
-- Great Truncated Cuboctahedron
-- Icositruncated Dodecadodecahedron
-- Truncated Dodecadodecahedron
-- Great Truncated Icosidodecahedron
-
-#### Self-Intersecting Snub Quasi-Regular Polyhedra
-- Snub Dodecadodecahedron
-- Inverted Snub Dodecadodecahedron
-- Great Snub Icosidodecahedron
-- Great Inverted Snub Icosidodecahedron
-- Great Retrosnub Icosidodecahedron
-- Snub Icosidodecadodecahedron
-- Great Snub Dodecicosidodecahedron
-- Small Snub Icosicosidodecahedron
-- Small Retrosnub Icosicosidodecahedron
-- Great Dirhombicosidodecahedron
-
 #### Catalan Solids
 - Triakis Tetrahedron
 - Rhombic Dodecahedron
@@ -115,12 +59,33 @@ Polyhedron classes for Processing
 - Pentagonal Hexecontahedron (laevo)
 - Disdyakis Triacontahedron
 
+#### Self-Intersecting Quasi-Regular Polyhedra
+- Ditrigonal Dodecadodecahedron
+- Small Ditrigonal Icosidodecahedron
+- Great Ditrigonal Icosidodecahedron
+- Dodecadodecahedron
+- Great Icosidodecahedron
+
 #### Self-Intersecting Quasi-Regular Duals
 - Medial Triambic Icosahedron
 - Small Triambic Icosahedron
 - Great Triambic Icosahedron
 - Medial Rhombic Triacontahedron
 - Great Rhombic Triacontahedron
+
+#### Self-Intersecting Quasi-Quasi-Regular Polyhedra
+- Small Cubicuboctahedron
+- Great Cubicuboctahedron
+- Uniform Great Rhombicuboctahedron
+- Small Dodecicosidodecahedron
+- Great Dodecicosidodecahedron
+- Small Ditrigonal Dodecicosidodecahedron
+- Great Ditrigonal Dodecicosidodecahedron
+- Icosidodecadodecahedron
+- Small Icosicosidodecahedron
+- Great Icosicosidodecahedron
+- Rhombidodecadodecahedron
+- Uniform Great Rhombicosidodecahedron
 
 #### Self-Intersecting Quasi-Quasi-Regular Duals
 - Small Hexacronic Icositetrahedron
@@ -136,6 +101,15 @@ Polyhedron classes for Processing
 - Medial Deltoidal Hexecontahedron
 - Great Deltoidal Hexecontahedron
 
+#### Versi-Quasi-Regular Polyhedra
+- Small Rhombihexahedron
+- Great Rhombihexahedron
+- Small Dodecicosahedron
+- Great Dodecicosahedron
+- Small Rhombidodecahedron
+- Great Rhombidodecahedron
+- Rhombicosahedron
+
 #### Versi-Quasi-Regular Duals
 - Small Rhombihexacron
 - Great Rhombihexacron
@@ -145,6 +119,13 @@ Polyhedron classes for Processing
 - Great Rhombidodecacron
 - Rhombicosacron
 
+#### Self-Intersecting Truncated Regular Polyhedra
+- Stellated Truncated Hexahedron
+- Truncated Great Dodecahedron
+- Small Stellated Truncated Dodecahedron
+- Great Stellated Truncated Dodecahedron
+- Truncated Great Icosahedron
+
 #### Self-Intersecting Truncated Regular Duals
 - Great Triakis Octahedron
 - Small Stellapentakis Dodecahedron
@@ -152,12 +133,31 @@ Polyhedron classes for Processing
 - Great Triakis Icosahedron
 - Great Stellapentakis Dodecahedron
 
+#### Self-Intersecting Truncated Quasi-Regular Polyhedra  
+- Cubitruncated Cuboctahedron
+- Great Truncated Cuboctahedron
+- Icositruncated Dodecadodecahedron
+- Truncated Dodecadodecahedron
+- Great Truncated Icosidodecahedron
+
 #### Self-Intersecting Truncated Quasi-Regular Duals
 - Tetradyakis Hexahedron
 - Great Disdyakis Dodecahedron
 - Tridyakis Icosahedron
 - Medial Disdyakis Triacontahedron
 - Great Disdyakis Triacontahedron
+
+#### Self-Intersecting Snub Quasi-Regular Polyhedra
+- Snub Dodecadodecahedron
+- Inverted Snub Dodecadodecahedron
+- Great Snub Icosidodecahedron
+- Great Inverted Snub Icosidodecahedron
+- Great Retrosnub Icosidodecahedron
+- Snub Icosidodecadodecahedron
+- Great Snub Dodecicosidodecahedron
+- Small Snub Icosicosidodecahedron
+- Small Retrosnub Icosicosidodecahedron
+- Great Dirhombicosidodecahedron
 
 #### Self-Intersecting Snub Quasi-Regular Duals
 - Medial Pentagonal Hexecontahedron
@@ -169,6 +169,20 @@ Polyhedron classes for Processing
 - Great Hexagonal Hexecontahedron
 - Small Hexagonal Hexecontahedron
 - Small Hexagrammic Hexecontahedron
+- Hexagonal Antiprism
+- Heptagonal Antiprism
+- Octagonal Antiprism
+
+#### Prisms & Antiprisms
+- Triangular Prism
+- Square Prism (Cube)
+- Pentagonal Prism
+- Hexagonal Prism
+- Heptagonal Prism
+- Octagonal Prism
+- Triangular Antiprism (Octahedron)
+- Square Antiprism
+- Pentagonal Antiprism
 
 #### Non-Regular Toroidal Solids
 - Octagonal Iris Toroid

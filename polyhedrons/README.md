@@ -98,6 +98,60 @@ Polyhedron classes for Processing
 - Small Retrosnub Icosicosidodecahedron
 - Great Dirhombicosidodecahedron
 
+#### Catalan Solids
+- Triakis Tetrahedron
+- Rhombic Dodecahedron
+- Tetrakis Hexahedron
+- Triakis Octahedron
+- Deltoidal Icositetrahedron
+- Pentagonal Icositetrahedron (dextro)
+- Pentagonal Icositetrahedron (laevo)
+- Rhombic Triacontahedron
+- Disdyakis Dodecahedron
+- Pentakis Dodecahedron
+- Triakis Icosahedron
+- Deltoidal Hexecontahedron
+- Pentagonal Hexecontahedron (dextro)
+- Pentagonal Hexecontahedron (laevo)
+- Disdyakis Triacontahedron
+
+#### Self-Intersecting Quasi-Regular Duals
+- Medial Triambic Icosahedron
+- Small Triambic Icosahedron
+- Great Triambic Icosahedron
+- Medial Rhombic Triacontahedron
+- Great Rhombic Triacontahedron
+
+#### Self-Intersecting Quasi-Quasi-Regular Duals
+- Small Hexacronic Icositetrahedron
+- Great Hexacronic Icositetrahedron
+- Great Deltoidal Icositetrahedron
+- Small Dodecacronic Hexecontahedron
+- Great Dodecacronic Hexecontahedron
+- Small Ditrigonal Dodecacronic Hexecontahedron
+- Great Ditrigonal Dodecacronic Hexecontahedron
+- Medial Icosacronic Hexecontahedron
+- Small Icosacronic Hexecontahedron
+- Great Icosacronic Hexecontahedron
+- Medial Deltoidal Hexecontahedron
+- Great Deltoidal Hexecontahedron
+
+#### Versi-Quasi-Regular Duals
+- Small Rhombihexacron
+- Great Rhombihexacron
+- Small Dodecicosacron
+- Great Dodecicosacron
+- Small Rhombidodecacron
+- Great Rhombidodecacron
+- Rhombicosacron
+
+#### Self-Intersecting Truncated Regular Duals
+- Great Triakis Octahedron
+- Small Stellapentakis Dodecahedron
+- Great Pentakis Dodecahedron
+- Great Triakis Icosahedron
+- Great Stellapentakis Dodecahedron
+
 #### Self-Intersecting Truncated Quasi-Regular Duals
 - Tetradyakis Hexahedron
 - Great Disdyakis Dodecahedron

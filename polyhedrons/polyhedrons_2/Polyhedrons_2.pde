@@ -112,6 +112,53 @@ public void setup(){
   polyObjects.add(new SmallSnubIcosicosidodecahedron());
   polyObjects.add(new SmallRetrosnubIcosicosidodecahedron());
   polyObjects.add(new GreatDirhombicosidodecahedron());
+  //catalan solids
+  polyObjects.add(new TriakisTetrahedron());
+  polyObjects.add(new RhombicDodecahedron());
+  polyObjects.add(new TetrakisHexahedron());
+  polyObjects.add(new TriakisOctahedron());
+  polyObjects.add(new DeltoidalIcositetrahedron());
+  polyObjects.add(new PentagonalIcositetrahedron());
+  polyObjects.add(new RhombicTriacontahedron());
+  polyObjects.add(new DisdyakisDodecahedron());
+  polyObjects.add(new PentakisDodecahedron());
+  polyObjects.add(new TriakisIcosahedron());
+  polyObjects.add(new DeltoidalHexecontahedron());
+  polyObjects.add(new PentagonalHexecontahedron());
+  polyObjects.add(new DisdyakisTriacontahedron());
+  //self-intersecting quasi-regular duals
+  polyObjects.add(new MedialTriambicIcosahedron());
+  polyObjects.add(new SmallTriambicIcosahedron());
+  polyObjects.add(new GreatTriambicIcosahedron());
+  polyObjects.add(new MedialRhombicTriacontahedron());
+  polyObjects.add(new GreatRhombicTriacontahedron());
+  //self-intersecting quasi-quasi-regular duals
+  polyObjects.add(new SmallHexacronicIcositetrahedron());
+  polyObjects.add(new GreatHexacronicIcositetrahedron());
+  polyObjects.add(new GreatDeltoidalIcositetrahedron());
+  polyObjects.add(new SmallDodecacronicHexecontahedron());
+  polyObjects.add(new GreatDodecacronicHexecontahedron());
+  polyObjects.add(new SmallDitrigonalDodecacronicHexecontahedron());
+  polyObjects.add(new GreatDitrigonalDodecacronicHexecontahedron());
+  polyObjects.add(new MedialIcosacronicHexecontahedron());
+  polyObjects.add(new SmallIcosacronicHexecontahedron());
+  polyObjects.add(new GreatIcosacronicHexecontahedron());
+  polyObjects.add(new MedialDeltoidalHexecontahedron());
+  polyObjects.add(new GreatDeltoidalHexecontahedron());
+  //versi-quasi-regular duals
+  polyObjects.add(new SmallRhombihexacron());
+  polyObjects.add(new GreatRhombihexacron());
+  polyObjects.add(new SmallDodecicosacron());
+  polyObjects.add(new GreatDodecicosacron());
+  polyObjects.add(new SmallRhombidodecacron());
+  polyObjects.add(new GreatRhombidodecacron());
+  polyObjects.add(new Rhombicosacron());
+  //self-intersecting truncated regular duals
+  polyObjects.add(new GreatTriakisOctahedron());
+  polyObjects.add(new SmallStellapentakisDodecahedron());
+  polyObjects.add(new GreatPentakisDodecahedron());
+  polyObjects.add(new GreatTriakisIcosahedron());
+  polyObjects.add(new GreatStellapentakisDodecahedron());
   //self-intersecting truncated quasi-regular duals
   polyObjects.add(new TetradyakisHexahedron());
   polyObjects.add(new GreatDisdyakisDodecahedron());

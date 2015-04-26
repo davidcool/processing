@@ -7,7 +7,7 @@ http://generactive.net
 http://mystic.codes
 */
 
-public GreatTruncatedIcosidodecahedron poly;
+public TriakisTetrahedron poly;
 public float zoom = 0.025;
 public int toggle = 0;
 public PFont f;
@@ -21,7 +21,7 @@ public void setup(){
   textFont(f,24);
   textAlign(CENTER);
   //Instantiate the object
-  poly = new GreatTruncatedIcosidodecahedron();
+  poly = new TriakisTetrahedron();
   //Call some methods on the TetradyakisHexahedron object
   poly.fillColor(int(random(255)), int(random(255)), int(random(255)), 255);
   poly.strokeColor(int(random(255)), int(random(255)), int(random(255)), 255);

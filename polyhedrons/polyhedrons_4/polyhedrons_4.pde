@@ -62,11 +62,11 @@ void draw() {
 void mousePressed() {
   if (mouseButton == LEFT) {
     toggle = false;
-    spheres.get(0).addSphereItem("SmallHexagrammicHexecontahedron");
-    spheres.get(1).addSphereItem("SmallHexagrammicHexecontahedron");
-    spheres.get(2).addSphereItem("SmallHexagrammicHexecontahedron");
-    spheres.get(3).addSphereItem("SmallHexagrammicHexecontahedron");
-    spheres.get(4).addSphereItem("SmallHexagrammicHexecontahedron");
+    spheres.get(0).addSphereItem("StellatedTruncatedHexahedron");
+    spheres.get(1).addSphereItem("TruncatedGreatDodecahedron");
+    spheres.get(2).addSphereItem("SmallStellatedTruncatedDodecahedron");
+    spheres.get(3).addSphereItem("GreatStellatedTruncatedDodecahedron");
+    spheres.get(4).addSphereItem("TruncatedGreatIcosahedron");
   } else if (mouseButton == RIGHT) {
     spheres.get(0).removeSphereItem();
     spheres.get(1).removeSphereItem();

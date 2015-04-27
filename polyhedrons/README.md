@@ -184,6 +184,20 @@ Polyhedron classes for Processing
 - Square Antiprism
 - Pentagonal Antiprism
 
+#### Dipyramids & Trapezohedra
+- Triangular Dipyramid
+- Square Dipyramid (Octahedron)
+- Pentagonal Dipyramid
+- Hexagonal Dipyramid
+- Heptagonal Dipyramid
+- Octagonal Dipyramid
+- Trigonal Trapezohedron (Cube)
+- Tetragonal Trapezohedron
+- Pentagonal Trapezohedron
+- Hexagonal Trapezohedron
+- Heptagonal Trapezohedron
+- Octagonal Trapezohedron
+
 #### Non-Regular Toroidal Solids
 - Octagonal Iris Toroid
 

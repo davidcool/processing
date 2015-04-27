@@ -185,6 +185,19 @@ public void setup(){
   polyObjects.add(new TriangularAntiprism());
   polyObjects.add(new SquareAntiprism());
   polyObjects.add(new PentagonalAntiprism());
+  //dipyramids & trapezohedra
+  polyObjects.add(new TriangularDipyramid());
+  polyObjects.add(new SquareDipyramid());
+  polyObjects.add(new PentagonalDipyramid());
+  polyObjects.add(new HexagonalDipyramid());
+  polyObjects.add(new HeptagonalDipyramid());
+  polyObjects.add(new OctagonalDipyramid());
+  polyObjects.add(new TrigonalTrapezohedron());
+  polyObjects.add(new TetragonalTrapezohedron());
+  polyObjects.add(new PentagonalTrapezohedron());
+  polyObjects.add(new HexagonalTrapezohedron());
+  polyObjects.add(new HeptagonalTrapezohedron());
+  polyObjects.add(new OctagonalTrapezohedron());
   //non-regular toroidal solids
   polyObjects.add(new OctagonalIrisToroid());
   //regular hexagonal toroidal solids
